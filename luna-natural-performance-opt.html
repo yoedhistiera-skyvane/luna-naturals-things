@@ -77,6 +77,16 @@
   .opts{margin:10px 0;}
   .opts .o{background:#fffaf6;border:1px dashed #f0bfa9;border-radius:10px;padding:12px 16px;margin:8px 0;font-size:14px;}
   .opts .o b{color:var(--coral);}
+  /* funnel */
+  .funnel{display:flex;gap:10px;align-items:stretch;margin:18px 0 6px;flex-wrap:wrap;}
+  .fstage{flex:1;min-width:130px;background:var(--green-soft);border-radius:12px;padding:16px;text-align:center;}
+  .fstage .n{font-family:'Josefin Sans',sans-serif;font-size:30px;font-weight:700;color:var(--green);line-height:1;}
+  .fstage .l{font-size:11.5px;color:var(--muted);margin-top:7px;text-transform:uppercase;letter-spacing:.5px;}
+  .fstage .r{font-size:12px;color:var(--coral);font-weight:600;margin-top:5px;}
+  .fstage.dead{background:#fbe2da;}
+  .fstage.dead .n,.fstage.dead .r{color:#c0432a;}
+  h2.plain{padding-left:0;}
+  .sub.plain{padding-left:0;}
 </style>
 </head>
 <body>
@@ -91,9 +101,58 @@
   <div class="wrap">
 
     <div class="diagnosis">
-      <span class="pill">The one-line diagnosis</span>
-      <p style="margin:12px 0 0;font-size:16px;">Creative, offer, and page are all <strong>healthy</strong>. People click, land, add to cart, and reach checkout — then <strong>0 purchases</strong> (7 checkouts, 0 sales). The money is dying at <strong>checkout + tracking</strong>, not at the ad or the offer. <span class="hl">Fix the purchase step before spending more on traffic.</span></p>
+      <span class="pill">The diagnosis</span>
+      <p style="margin:12px 0 0;font-size:16px;"><strong>The funnel leaks in two places — not just at checkout.</strong></p>
+      <ul style="margin:10px 0 0;font-size:15px;">
+        <li><b>Top leak:</b> only <b>4% of visitors add to cart</b> (a healthy store does 8–15%). The traffic Meta is sending — and partly the page — isn't turning interest into carts.</li>
+        <li><b>Bottom leak:</b> the <b>8 checkouts produce 0 attributed purchases</b> — a cross-domain tracking break (ads on one domain, checkout on another).</li>
+        <li><b>The one healthy step</b> is in between: add-to-cart → checkout = <b>62%</b>.</li>
+      </ul>
+      <p style="margin:12px 0 0;font-size:15px;">The two leaks are <b>linked</b>: with no purchase signal, Meta can't learn who buys — so it sends cheap, low-intent clicks (which is why ATC is only 4%) <em>and</em> can't credit the sales that do happen. <span class="hl">Fix tracking first — it unblocks both ends at once.</span></p>
     </div>
+
+    <!-- DATA -->
+    <section>
+      <h2 class="plain">What the Data Shows</h2>
+      <p class="sub plain">The evidence behind every recommendation below (20–26 Jun, Meta-attributed).</p>
+      <div class="card">
+        <h3>The funnel — where it breaks</h3>
+        <div class="funnel">
+          <div class="fstage"><div class="n">325</div><div class="l">Landing-page views</div><div class="r">$3.55 / LPV</div></div>
+          <div class="fstage"><div class="n">13</div><div class="l">Adds to cart</div><div class="r">4.0% of LPV</div></div>
+          <div class="fstage"><div class="n">8</div><div class="l">Checkouts</div><div class="r">62% of ATC ✓</div></div>
+          <div class="fstage dead"><div class="n">0</div><div class="l">Purchases (attributed)</div><div class="r">the break</div></div>
+        </div>
+        <p style="font-size:14px;color:var(--muted);margin:6px 0 0;">ATC→Checkout is healthy (62%). The two problems: only 4% of visitors add to cart, and <b>0 checkouts convert to attributed purchases</b> — the signature of cross-domain attribution loss (ads on <code>get</code>/<code>getlunanatural.co</code>, checkout on <code>lunanaturals.co</code>).</p>
+
+        <h3>Two pages, head to head</h3>
+        <table>
+          <tr><th>Page</th><th>Spend</th><th>LPV</th><th>ATC</th><th>Checkouts</th><th>Read</th></tr>
+          <tr><td><b>getlunanatural.co/lunanaturals</b></td><td>$602</td><td>230</td><td>6 (3%)</td><td><b>7</b></td><td>Best closer — clean checkout</td></tr>
+          <tr><td><b>get.lunanaturals.co</b></td><td>$534</td><td>93</td><td>7 (8%)</td><td>1</td><td>High interest, gauntlet checkout kills it</td></tr>
+        </table>
+
+        <h3>Who actually buys — by age <span style="font-weight:400;color:var(--muted);font-size:13px;">(age split from the 20–23 Jun pull)</span></h3>
+        <table>
+          <tr><th>Age</th><th>Spend</th><th>LPV</th><th>ATC</th><th>Checkouts</th></tr>
+          <tr><td>18–44</td><td>$155</td><td>35</td><td>0</td><td>0</td></tr>
+          <tr><td><b>45–54</b> <span class="tag t-nice">most efficient</span></td><td>$82</td><td>15</td><td><b>4</b></td><td><b>5</b></td></tr>
+          <tr><td>55–64</td><td>$169</td><td>33</td><td>2</td><td>1</td></tr>
+          <tr><td>65+</td><td>$350</td><td>75</td><td>5</td><td>2</td></tr>
+        </table>
+        <p style="font-size:14px;color:var(--muted);margin:6px 0 0;"><b>Every</b> add-to-cart and checkout came from <b>45+</b>. Under-45 spent ~20% of budget for zero intent — the cheapest clicks were the youngest and converted worst.</p>
+
+        <h3>Creatives that drove the funnel</h3>
+        <table>
+          <tr><th>Creative</th><th>Spend</th><th>LPV</th><th>ATC</th><th>Checkouts</th></tr>
+          <tr><td><b>TSL-03 "The Pediatrician's Daughter"</b></td><td>$77</td><td>35</td><td>4</td><td><b>5</b></td></tr>
+          <tr><td><b>UGC3 (lunanaturalUGC3)</b></td><td>$204</td><td>33</td><td><b>7</b></td><td>1</td></tr>
+          <tr><td>0609(5)</td><td>$107</td><td>23</td><td>1</td><td>1</td></tr>
+          <tr><td>TSL-07 "The Whole Foods Aisle"</td><td>$33</td><td>4</td><td>1</td><td>1</td></tr>
+          <tr><td>Statics + animations</td><td>~$250</td><td>—</td><td>0</td><td>0</td></tr>
+        </table>
+      </div>
+    </section>
 
     <!-- 0 -->
     <section>
@@ -104,7 +163,6 @@
           <li><b>Run a US test order end-to-end</b> — use a US VPN <em>and</em> a real US shipping address. A VPN only shows the US experience; the real test is completing payment.</li>
           <li><b>Confirm the Purchase event fires</b> in Meta Events Manager (check CAPI deduplication). ATC + InitiateCheckout already fire — Purchase is the gap.</li>
           <li><b>Verify free shipping shows on 2+ packs</b> for US and there are no payment errors.</li>
-          <li><b>Consolidate to one pixel / one domain.</b> Spreading across <code>get.lunanaturals.co</code>, <code>getlunanatural.co</code>, and <code>lunanaturals.co</code> fragments tracking and trust.</li>
         </ul>
         <div class="callout"><span class="label">Best case:</span> have an actual US-based person place and then refund a real order while you watch Events Manager live.</div>
       </div>
@@ -116,14 +174,13 @@
       <p class="sub">Your best closer (7 of 8 checkouts). Small fixes, high return.</p>
       <div class="card">
         <table>
-          <tr><th style="width:30px;"></th><th>Fix</th><th>Why</th><th style="width:70px;">Owner</th></tr>
-          <tr><td><span class="tag t-crit">1</span></td><td><b>Remove the "0+ orders" bug</b></td><td>It's the dynamic order-counter (paired with the "Amanda P. bought 4-pack · 33 min ago" ticker). The count variable returns 0 → shows "0+ orders." Fix the data binding or hard-code a real number.</td><td>Dev</td></tr>
-          <tr><td><span class="tag t-crit">2</span></td><td><b>Move "Most Popular" to the 2-pack</b></td><td>It's currently on the 3-pack. The 2-pack is the believable family default → lifts conversion. Keep "Best Value / Biggest Saving" on the 3-pack.</td><td>CRO</td></tr>
-          <tr><td><span class="tag t-imp">3</span></td><td><b>Swap headline: ticks → kids/mosquitoes</b></td><td>Your ads are about kids; the page must match or people bounce (see options below).</td><td>Copy</td></tr>
-          <tr><td><span class="tag t-imp">4</span></td><td><b>Trim 4 tiers → 3 (1/2/3-pack)</b></td><td>Four options = choice overload; three with a clear hero converts better.</td><td>CRO</td></tr>
-          <tr><td><span class="tag t-imp">5</span></td><td><b>Add a free gift (bracelet) on the top tier</b></td><td>Raises perceived value without cutting price.</td><td>Dev</td></tr>
-          <tr><td><span class="tag t-imp">6</span></td><td><b>Soften "Save 60%" / drop Disneyland / dial back 50k reviews</b></td><td>See explanation below — these attack trust, your bottleneck.</td><td>Copy</td></tr>
-          <tr><td><span class="tag t-nice">7</span></td><td><b>Keep the clean checkout exactly as-is</b></td><td>The 2–3 click Shopify checkout is this page's #1 strength. Do NOT add a funnel gauntlet.</td><td>Dev</td></tr>
+          <tr><th style="width:30px;"></th><th>Fix</th><th>Why</th></tr>
+          <tr><td><span class="tag t-crit">1</span></td><td><b>Move "Most Popular" to the 2-pack</b></td><td>It's currently on the 3-pack. The 2-pack is the believable family default → lifts conversion. Keep "Best Value / Biggest Saving" on the 3-pack.</td></tr>
+          <tr><td><span class="tag t-imp">2</span></td><td><b>Swap headline: ticks → kids/mosquitoes</b></td><td>Your ads are about kids; the page must match or people bounce (see options below).</td></tr>
+          <tr><td><span class="tag t-imp">3</span></td><td><b>Trim 4 tiers → 3 (1/2/3-pack)</b></td><td>Four options = choice overload; three with a clear hero converts better.</td></tr>
+          <tr><td><span class="tag t-imp">4</span></td><td><b>Add a free gift (bracelet) on the top tier</b></td><td>Raises perceived value without cutting price.</td></tr>
+          <tr><td><span class="tag t-imp">5</span></td><td><b>Soften "Save 60%" / drop Disneyland / dial back 50k reviews</b></td><td>See explanation below — these attack trust, your bottleneck.</td></tr>
+          <tr><td><span class="tag t-nice">6</span></td><td><b>Keep the clean checkout exactly as-is</b></td><td>The 2–3 click Shopify checkout is this page's #1 strength. Do NOT add a funnel gauntlet.</td></tr>
         </table>
 
         <h3>Headline rewrite — pick one</h3>
@@ -178,15 +235,40 @@
       <div class="card">
         <div class="callout green"><b>25–65+ broad + let Meta optimize is fine</b> — provided Purchase tracking is fixed first. With no purchase signal, Meta defaults to cheap clicks (your data: under-45 = 0 add-to-carts). Launch broad, optimize for ATC/Checkout, and <b>review the age breakdown weekly — cut 25–44 if it stays at 0 funnel after real spend.</b></div>
 
-        <h3>Untapped audiences — mapped to creatives you've already launched (data-backed)</h3>
+        <div class="callout"><span class="label">Honest read on "audiences":</span> only two things here are <b>hard data</b> — that <b>45+ converts</b>, and the <b>retargeting pools you already have</b>. Everything in Tier 2/3 is a <b>hypothesis derived from your winning creatives' themes + the product</b> — smart starting points to test, <b>not proven</b>. With a broad / small-budget strategy, the best way to reach these is usually to <b>build a creative per persona and let Meta find them</b>, not split budget across many interest ad sets.</div>
+
+        <h3>Tier 1 — Proven / data-backed (use now)</h3>
         <table>
-          <tr><th>Audience (untested)</th><th>Backed by</th><th>Tied to creative</th></tr>
-          <tr><td><b>Grandparents 55–65+</b></td><td>55–64 + 65+ drove <b>3 ATC + 3 checkouts</b> in your age breakdown</td><td>"Flight to Grandma's," "Sunday Supper"</td></tr>
-          <tr><td><b>Natural / "crunchy" parents</b><br><span style="color:var(--muted);font-size:13px;">Whole Foods, organic, clean beauty, EWG</span></td><td>DEET-free is the core hook; Whole Foods TSL drove a checkout</td><td>"The Whole Foods Aisle"</td></tr>
-          <tr><td><b>Youth-sports &amp; outdoor families</b><br><span style="color:var(--muted);font-size:13px;">Little League, soccer, camping, Scouts</span></td><td><b>45–54 was your most efficient buyer</b> (4 ATC, 5 CO) — peak sports-parent age</td><td>"T-Ball Game," "Creek Behind the House"</td></tr>
-          <tr><td><b>Retargeting — ATC &amp; checkout abandoners</b></td><td>You have <b>13 ATC + 8 abandoned checkouts</b> sitting unused</td><td>All — warmest, cheapest audience to recover</td></tr>
+          <tr><th>Audience</th><th>Why it's real</th></tr>
+          <tr><td><b>Retargeting — ATC + checkout abandoners</b></td><td>You have <b>13 ATC + 8 checkouts</b> sitting unused — warmest, cheapest to recover</td></tr>
+          <tr><td><b>Video viewers (50%+) of the TSL / UGC ads</b></td><td>Engaged with your proven creatives — strong retargeting + lookalike seed</td></tr>
+          <tr><td><b>Lookalike of purchasers / checkout-initiators</b></td><td>Build once tracking is fixed — modeled on real converters</td></tr>
+          <tr><td><b>Age 45+ (esp. 45–54) inside any audience</b></td><td><b>All 13 ATC + 8 checkouts came from 45+</b></td></tr>
         </table>
-        <div class="callout"><span class="label">De-prioritize the daycare / young-parent angle</span> ("Daycare Note"): that 25–44 persona showed <b>0 ATC</b>. Your real buyer is the <b>sports-parent (45–54)</b> and <b>grandparent (55+)</b>.</div>
+
+        <h3>Tier 2 — Creative-derived hypotheses <span style="font-weight:400;color:var(--muted);font-size:13px;">(test as creative angles, not proven)</span></h3>
+        <table>
+          <tr><th>Persona</th><th>Interest signals to test</th><th>From which creative / hook</th></tr>
+          <tr><td><b>Grandparents 55–65+</b></td><td>grandchildren, AARP, grandparenting</td><td>"Flight to Grandma's," "Sunday Supper"</td></tr>
+          <tr><td><b>Natural / clean-living parents</b></td><td>Whole Foods, organic, EWG, Thrive Market, clean beauty</td><td>"Whole Foods Aisle" + DEET-free hook</td></tr>
+          <tr><td><b>Youth-sports parents</b></td><td>Little League, AYSO / youth soccer, youth baseball, gymnastics</td><td>"T-Ball Game"</td></tr>
+          <tr><td><b>Outdoors / camping families</b></td><td>REI, camping, hiking, national parks, fishing</td><td>"Creek Behind the House"</td></tr>
+          <tr><td><b>Health-conscious / pediatrician-trusting</b></td><td>pediatrics, BabyCenter, What to Expect, holistic health</td><td>"The Pediatrician's Daughter"</td></tr>
+          <tr><td><b>Family-travel parents</b></td><td>family vacation, Disney, cruises, beach resorts</td><td>"Flight to Grandma's"</td></tr>
+          <tr><td><b>Sensitive-skin / non-toxic</b></td><td>eczema, sensitive skin, essential oils, non-toxic living</td><td>DEET-free / plant-powered hook</td></tr>
+          <tr><td><b>Pet households</b></td><td>dog owners, cat owners</td><td>product is "safe for puppies &amp; cats"</td></tr>
+          <tr><td><b>Summer-camp / sleepover parents</b></td><td>summer camp, school-age parenting</td><td>"The Sleepover"</td></tr>
+          <tr><td><b>Road-trip / on-the-go parents</b></td><td>family road trips, SUVs / minivans</td><td>"The Spray Bottle in the Car"</td></tr>
+        </table>
+
+        <h3>Tier 3 — Geo / seasonal refinements</h3>
+        <ul>
+          <li><b>Mosquito- &amp; tick-heavy regions</b> — Southeast / Gulf (FL, TX, LA, GA), Upper-Midwest lake country</li>
+          <li><b>Lake house / cabin / rural-suburban</b> households</li>
+          <li><b>Lyme-disease-aware regions</b> (Northeast) — lead with the tick angle there</li>
+        </ul>
+
+        <div class="callout"><span class="label">De-prioritize:</span> the daycare / young-parent angle ("Daycare Note") — that 25–44 persona showed <b>0 ATC</b>. Your buyer is the <b>sports-parent (45–54)</b> and <b>grandparent (55+)</b>.</div>
       </div>
     </section>
 
@@ -214,7 +296,6 @@
           <li><b>Build the retargeting ad set now</b> — ATC + checkout viewers. Highest-intent, cheapest way to recover your 8 abandoned checkouts.</li>
           <li><b>Once purchases register → build a Lookalike</b> off purchasers / checkout-initiators.</li>
           <li><b>Move the Itch Relief Stick upsell to AFTER purchase</b>, not before payment.</li>
-          <li><b>Pick one domain</b> for everything so the pixel learns in one place.</li>
         </ul>
       </div>
     </section>
