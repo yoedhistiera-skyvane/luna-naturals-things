@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luna Naturals — Optimization & Test Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Josefin+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFF7EF;
+    --coral:#F26A3E;
+    --coral-soft:#FCE6DC;
+    --green:#2F5D3A;
+    --green-soft:#E3EBE2;
+    --ink:#2A2620;
+    --muted:#7A7266;
+    --card:#FFFDFB;
+    --line:#EDE2D5;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;background:var(--cream);color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px 80px;}
+  h1,h2,h3{font-family:'Josefin Sans',sans-serif;letter-spacing:.2px;}
+  /* Header */
+  .masthead{background:var(--green);color:#fff;padding:38px 0 34px;margin-bottom:0;}
+  .masthead .wrap{padding-bottom:0;}
+  .brand{font-family:'Josefin Sans',sans-serif;font-weight:700;font-size:22px;color:#fff;letter-spacing:.5px;}
+  .brand .dot{color:var(--coral);}
+  .masthead h1{font-size:36px;margin:14px 0 6px;color:#fff;font-weight:700;line-height:1.15;}
+  .masthead p{margin:0;color:#cfe0cf;font-size:15px;}
+  .pill{display:inline-block;background:var(--coral);color:#fff;font-size:12px;font-weight:600;
+    padding:4px 12px;border-radius:999px;letter-spacing:.4px;text-transform:uppercase;}
+  /* Diagnosis banner */
+  .diagnosis{background:var(--coral-soft);border:1px solid #f4c9b6;border-radius:14px;
+    padding:20px 24px;margin:30px 0 8px;}
+  .diagnosis strong{color:var(--coral);}
+  /* Sections */
+  section{margin-top:40px;}
+  h2{font-size:24px;color:var(--green);margin:0 0 4px;display:flex;align-items:center;gap:10px;}
+  h2 .num{background:var(--green);color:#fff;width:30px;height:30px;border-radius:8px;
+    display:inline-flex;align-items:center;justify-content:center;font-size:15px;flex:none;}
+  .sub{color:var(--muted);font-size:14px;margin:0 0 16px;padding-left:40px;}
+  h3{font-size:17px;margin:22px 0 8px;color:var(--ink);}
+  /* Cards */
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:14px;
+    box-shadow:0 1px 2px rgba(42,38,32,.03);}
+  /* Tables */
+  table{width:100%;border-collapse:collapse;margin:12px 0 4px;font-size:14px;}
+  th{text-align:left;background:var(--green-soft);color:var(--green);font-family:'Josefin Sans',sans-serif;
+    font-weight:600;padding:10px 12px;border-bottom:2px solid #d4e0d3;}
+  td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tr:last-child td{border-bottom:none;}
+  td code, p code{background:#f1ece4;padding:2px 6px;border-radius:5px;font-size:13px;}
+  /* Tags */
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:6px;letter-spacing:.3px;}
+  .t-crit{background:#fbe2da;color:#c0432a;}
+  .t-imp{background:#fcefb8;color:#8a6d00;}
+  .t-nice{background:var(--green-soft);color:var(--green);}
+  /* Lists */
+  ul{margin:8px 0;padding-left:20px;}
+  li{margin:6px 0;}
+  .check li{list-style:none;position:relative;padding-left:26px;}
+  .check li::before{content:"✓";position:absolute;left:0;color:var(--coral);font-weight:700;}
+  .x li::before{content:"✕";color:#c0432a;}
+  /* Callout */
+  .callout{border-left:4px solid var(--coral);background:#fffaf6;padding:12px 18px;border-radius:0 10px 10px 0;margin:14px 0;font-size:14px;}
+  .callout.green{border-color:var(--green);background:#f6faf6;}
+  .label{font-weight:700;color:var(--green);}
+  .footer{margin-top:50px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center;}
+  .hl{background:linear-gradient(transparent 60%, #fcd9c8 60%);font-weight:600;}
+  .opts{margin:10px 0;}
+  .opts .o{background:#fffaf6;border:1px dashed #f0bfa9;border-radius:10px;padding:12px 16px;margin:8px 0;font-size:14px;}
+  .opts .o b{color:var(--coral);}
+</style>
+</head>
+<body>
+  <div class="masthead">
+    <div class="wrap">
+      <div class="brand">Luna <span class="dot">Naturals</span></div>
+      <h1>Optimization &amp; Test Plan</h1>
+      <p>Mosquito Patch for Kids · Paid social · Prepared for the team</p>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <div class="diagnosis">
+      <span class="pill">The one-line diagnosis</span>
+      <p style="margin:12px 0 0;font-size:16px;">Creative, offer, and page are all <strong>healthy</strong>. People click, land, add to cart, and reach checkout — then <strong>0 purchases</strong> (7 checkouts, 0 sales). The money is dying at <strong>checkout + tracking</strong>, not at the ad or the offer. <span class="hl">Fix the purchase step before spending more on traffic.</span></p>
+    </div>
+
+    <!-- 0 -->
+    <section>
+      <h2><span class="num">0</span> Tracking &amp; Checkout <span class="tag t-crit" style="margin-left:6px;">CRITICAL — DO FIRST</span></h2>
+      <p class="sub">This gates everything below. Nothing converts until a purchase can register.</p>
+      <div class="card">
+        <ul class="check">
+          <li><b>Run a US test order end-to-end</b> — use a US VPN <em>and</em> a real US shipping address. A VPN only shows the US experience; the real test is completing payment.</li>
+          <li><b>Confirm the Purchase event fires</b> in Meta Events Manager (check CAPI deduplication). ATC + InitiateCheckout already fire — Purchase is the gap.</li>
+          <li><b>Verify free shipping shows on 2+ packs</b> for US and there are no payment errors.</li>
+          <li><b>Consolidate to one pixel / one domain.</b> Spreading across <code>get.lunanaturals.co</code>, <code>getlunanatural.co</code>, and <code>lunanaturals.co</code> fragments tracking and trust.</li>
+        </ul>
+        <div class="callout"><span class="label">Best case:</span> have an actual US-based person place and then refund a real order while you watch Events Manager live.</div>
+      </div>
+    </section>
+
+    <!-- 1 -->
+    <section>
+      <h2><span class="num">1</span> Quick Fixes — getlunanatural.co/lunanaturals</h2>
+      <p class="sub">Your best closer (7 of 8 checkouts). Small fixes, high return.</p>
+      <div class="card">
+        <table>
+          <tr><th style="width:30px;"></th><th>Fix</th><th>Why</th><th style="width:70px;">Owner</th></tr>
+          <tr><td><span class="tag t-crit">1</span></td><td><b>Remove the "0+ orders" bug</b></td><td>It's the dynamic order-counter (paired with the "Amanda P. bought 4-pack · 33 min ago" ticker). The count variable returns 0 → shows "0+ orders." Fix the data binding or hard-code a real number.</td><td>Dev</td></tr>
+          <tr><td><span class="tag t-crit">2</span></td><td><b>Move "Most Popular" to the 2-pack</b></td><td>It's currently on the 3-pack. The 2-pack is the believable family default → lifts conversion. Keep "Best Value / Biggest Saving" on the 3-pack.</td><td>CRO</td></tr>
+          <tr><td><span class="tag t-imp">3</span></td><td><b>Swap headline: ticks → kids/mosquitoes</b></td><td>Your ads are about kids; the page must match or people bounce (see options below).</td><td>Copy</td></tr>
+          <tr><td><span class="tag t-imp">4</span></td><td><b>Trim 4 tiers → 3 (1/2/3-pack)</b></td><td>Four options = choice overload; three with a clear hero converts better.</td><td>CRO</td></tr>
+          <tr><td><span class="tag t-imp">5</span></td><td><b>Add a free gift (bracelet) on the top tier</b></td><td>Raises perceived value without cutting price.</td><td>Dev</td></tr>
+          <tr><td><span class="tag t-imp">6</span></td><td><b>Soften "Save 60%" / drop Disneyland / dial back 50k reviews</b></td><td>See explanation below — these attack trust, your bottleneck.</td><td>Copy</td></tr>
+          <tr><td><span class="tag t-nice">7</span></td><td><b>Keep the clean checkout exactly as-is</b></td><td>The 2–3 click Shopify checkout is this page's #1 strength. Do NOT add a funnel gauntlet.</td><td>Dev</td></tr>
+        </table>
+
+        <h3>Headline rewrite — pick one</h3>
+        <div class="opts">
+          <div class="o"><b>Option A</b> — "The Bug Spray Stayed in the Bag. The Bugs Found Your Kids Anyway." <em>(mirrors the proven get.lunanaturals.co headline)</em></div>
+          <div class="o"><b>Option B</b> — "DEET-Free Mosquito Protection Kids Actually Want to Wear."</div>
+          <div class="o"><b>Option C</b> — "Keep Mosquitoes Off Your Kids — No DEET, No Spray, No Fight."</div>
+        </div>
+        <p style="font-size:14px;color:var(--muted);margin:4px 0 0;">Lead with mosquitoes + kids; keep ticks as a secondary support line, not the headline.</p>
+
+        <h3>Why soften the aggressive claims</h3>
+        <div class="callout"><span class="label">Trust is the bottleneck (0 purchases) — these claims attack it:</span>
+          <ul style="margin:8px 0 0;">
+            <li><b>"Save 60%"</b> → on an unknown brand it reads <em>"was it ever worth full price? is this cheap junk?"</em> Steep discounts signal desperation and cheapen a kids' <em>health</em> product.</li>
+            <li><b>Disneyland giveaway</b> → feels like a sweepstakes / data-grab funnel, not a health brand. Distracts from safety and reads "dropshipper."</li>
+            <li><b>"50,000+ reviews"</b> → not believable for a brand nobody knows. The other page's <b>824 reviews feels real</b> and converts. Believable beats big.</li>
+          </ul>
+          <p style="margin:10px 0 0;"><span class="label">Keep the credible proof:</span> pediatrician-reviewed, third-party tested, real named testimonials.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 -->
+    <section>
+      <h2><span class="num">2</span> ABO Landing-Page Test</h2>
+      <p class="sub">One campaign, ABO, one ad set per LP. Same creative + same audience in every cell — the page is the only variable.</p>
+      <div class="card">
+        <h3>Ad sets = landing pages</h3>
+        <table>
+          <tr><th>Ad set (LP)</th><th>Why</th></tr>
+          <tr><td><code>getlunanatural.co/lunanaturals#shop</code></td><td><b>Best closer</b> — 7 of 8 checkouts; clean 2–3 click checkout.</td></tr>
+          <tr><td><code>get.lunanaturals.co</code> (PDP)</td><td>The comparison — strong 8% ATC but its gauntlet checkout collapses to 1 checkout. Tests whether clean beats gauntlet.</td></tr>
+          <tr><td><code>get.lunanaturals.co/articles/pediatrician</code> <span class="tag t-nice">optional 3rd</span></td><td>The advertorial entry is what actually drove the ATC on that domain.</td></tr>
+        </table>
+
+        <h3>Assets to load in every ad set (identical across cells)</h3>
+        <table>
+          <tr><th>Asset</th><th>Why — from your data</th></tr>
+          <tr><td><b>TSL-03 "The Pediatrician's Daughter"</b></td><td>Best in the account — 4 ATC, <b>5 checkouts</b> from $77 spend.</td></tr>
+          <tr><td><b>UGC3 (lunanaturalUGC3)</b></td><td><b>Most ATC (7)</b> — the only creative that produced ATC inside the LP test.</td></tr>
+          <tr><td><b>0609(5)</b></td><td>Proven UGC — 1 ATC + 1 checkout, steady traffic.</td></tr>
+          <tr><td><b>TSL-07 "The Whole Foods Aisle"</b></td><td>Secondary TSL winner — 1 ATC + 1 checkout; natural-mom angle.</td></tr>
+        </table>
+        <div class="callout"><span class="label">Do NOT include</span> the statics (0 funnel events) or animations (cheap clicks, 0 ATC) — they'd pollute the read. Optimize for <b>Add-to-Cart / Initiate Checkout</b> (proxy event) since purchase volume is too low for Meta to learn on Purchase at $100/day.</div>
+      </div>
+    </section>
+
+    <!-- 3 -->
+    <section>
+      <h2><span class="num">3</span> Audience</h2>
+      <p class="sub">Start broad, let Meta optimize — but only once tracking works. Geo already locked to US.</p>
+      <div class="card">
+        <div class="callout green"><b>25–65+ broad + let Meta optimize is fine</b> — provided Purchase tracking is fixed first. With no purchase signal, Meta defaults to cheap clicks (your data: under-45 = 0 add-to-carts). Launch broad, optimize for ATC/Checkout, and <b>review the age breakdown weekly — cut 25–44 if it stays at 0 funnel after real spend.</b></div>
+
+        <h3>Untapped audiences — mapped to creatives you've already launched (data-backed)</h3>
+        <table>
+          <tr><th>Audience (untested)</th><th>Backed by</th><th>Tied to creative</th></tr>
+          <tr><td><b>Grandparents 55–65+</b></td><td>55–64 + 65+ drove <b>3 ATC + 3 checkouts</b> in your age breakdown</td><td>"Flight to Grandma's," "Sunday Supper"</td></tr>
+          <tr><td><b>Natural / "crunchy" parents</b><br><span style="color:var(--muted);font-size:13px;">Whole Foods, organic, clean beauty, EWG</span></td><td>DEET-free is the core hook; Whole Foods TSL drove a checkout</td><td>"The Whole Foods Aisle"</td></tr>
+          <tr><td><b>Youth-sports &amp; outdoor families</b><br><span style="color:var(--muted);font-size:13px;">Little League, soccer, camping, Scouts</span></td><td><b>45–54 was your most efficient buyer</b> (4 ATC, 5 CO) — peak sports-parent age</td><td>"T-Ball Game," "Creek Behind the House"</td></tr>
+          <tr><td><b>Retargeting — ATC &amp; checkout abandoners</b></td><td>You have <b>13 ATC + 8 abandoned checkouts</b> sitting unused</td><td>All — warmest, cheapest audience to recover</td></tr>
+        </table>
+        <div class="callout"><span class="label">De-prioritize the daycare / young-parent angle</span> ("Daycare Note"): that 25–44 persona showed <b>0 ATC</b>. Your real buyer is the <b>sports-parent (45–54)</b> and <b>grandparent (55+)</b>.</div>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section>
+      <h2><span class="num">4</span> Creative Direction</h2>
+      <p class="sub">From the campaign data (QA Review doc not accessible — share it and we'll fold it in).</p>
+      <div class="card">
+        <table>
+          <tr><th>Family</th><th>Verdict</th><th>Action</th></tr>
+          <tr><td><b>TSL story-videos</b> (Higgsfield AI)</td><td>🟢 Winners — TSL-03, TSL-07</td><td>Double down — make more</td></tr>
+          <tr><td><b>Handmade UGC</b></td><td>🟢 Winners — UGC3, 0609(5)</td><td>Keep + re-cut for retention</td></tr>
+          <tr><td><b>Statics</b> (angle batches)</td><td>🔴 0 funnel events</td><td>Retire</td></tr>
+          <tr><td><b>Animations</b> (ad1, Mosquitoad1)</td><td>🔴 Cheap clicks, 0 intent</td><td>Retire</td></tr>
+        </table>
+        <p style="margin-top:14px;"><b>Heading:</b> more <span class="hl">TSL story-videos + kid-angle UGC</span>; retire statics &amp; animations. Match the ad angle (kids) to the page headline (kids).</p>
+      </div>
+    </section>
+
+    <!-- 5 -->
+    <section>
+      <h2><span class="num">5</span> Also Worth Doing</h2>
+      <div class="card">
+        <ul class="check">
+          <li><b>Build the retargeting ad set now</b> — ATC + checkout viewers. Highest-intent, cheapest way to recover your 8 abandoned checkouts.</li>
+          <li><b>Once purchases register → build a Lookalike</b> off purchasers / checkout-initiators.</li>
+          <li><b>Move the Itch Relief Stick upsell to AFTER purchase</b>, not before payment.</li>
+          <li><b>Pick one domain</b> for everything so the pixel learns in one place.</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer">
+      Luna Naturals — Optimization &amp; Test Plan · Based on the 20–26 Jun performance data ($1,154 spend · 325 LPV · 13 ATC · 8 checkouts · 0 purchases).<br>
+      Priority order: confirm purchases register → fix both pages' friction → run the ABO LP test on 45–65+ with the 3 winning creatives.
+    </div>
+
+  </div>
+</body>
+</html>
