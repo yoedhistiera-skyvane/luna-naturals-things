@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Luna Naturals · LP &amp; Creative Report · Launch → 30 Jun 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --coral:#F26A3E; --coral-d:#d24e22; --coral-bg:#fde7dd;
+    --ink:#1D1D1D; --olive:#2A2E16; --olive-2:#3a3f22;
+    --cream:#FFECDC; --paper:#FBF6EF; --card:#ffffff; --line:#ece2d5;
+    --sub:#6f665c; --green:#3f7d54; --green-bg:#e6f1ea; --amber:#b9822b; --amber-bg:#f8efdd;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Jost",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;font-weight:400}
+  h1,h2,h3,h4{font-family:"Jost",sans-serif;line-height:1.1;letter-spacing:-.01em;margin:0;font-weight:700}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  a{color:var(--coral-d);text-decoration:none}
+  code{font-family:ui-monospace,Menlo,monospace;background:#f1ebe2;padding:1px 6px;border-radius:5px;font-size:.86em}
+  /* header */
+  header{background:radial-gradient(120% 140% at 90% -10%,#3a3f22 0%,var(--olive) 45%,#1c1f10 100%);color:#f7f2ea;padding:52px 0 46px}
+  .brandrow{display:flex;align-items:center;gap:11px;font-weight:600;letter-spacing:.05em;font-size:15px;color:#fff}
+  .moon{width:20px;height:20px;border-radius:50%;background:var(--coral);box-shadow:inset -6px -3px 0 0 rgba(0,0,0,.22)}
+  .brandrow b{font-weight:700;letter-spacing:.02em}.brandrow span{color:#c9c6ab;font-weight:400;font-size:13px}
+  h1{font-size:clamp(36px,6.2vw,64px);margin:20px 0 8px;color:#fff;font-weight:800}
+  h1 .thin{font-weight:300;color:#d9d5c2}
+  .subhead{font-size:18px;color:#e2ddcd;max-width:760px;font-weight:400}
+  .meta-strip{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+  .meta-strip .m{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:11px;padding:10px 15px;min-width:120px}
+  .meta-strip .m i{font-style:normal;font-size:12px;color:#bdb9a2;text-transform:uppercase;letter-spacing:.06em;display:block}
+  .meta-strip .m b{font-size:16px;color:#fff;font-weight:600}
+  /* nav */
+  nav.toc{position:sticky;top:0;z-index:30;background:rgba(251,246,239,.93);backdrop-filter:blur(9px);border-bottom:1px solid var(--line)}
+  nav.toc .wrap{display:flex;gap:3px;overflow-x:auto;padding:10px 24px}
+  nav.toc a{white-space:nowrap;font-size:13px;font-weight:600;color:var(--sub);padding:6px 12px;border-radius:20px}
+  nav.toc a:hover{background:var(--coral);color:#fff}
+  /* sections */
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--coral-d);background:var(--coral-bg);padding:6px 13px;border-radius:20px;margin-bottom:16px}
+  h2{font-size:clamp(27px,4vw,40px);margin-bottom:10px;font-weight:700}
+  .lead{font-size:18px;color:var(--sub);max-width:800px;margin-bottom:26px}
+  h3{font-size:22px;margin:32px 0 12px;font-weight:600}
+  h3 .tag{font-size:12px;font-weight:700;color:var(--coral-d);background:var(--coral-bg);padding:3px 9px;border-radius:20px;vertical-align:middle;margin-left:8px;letter-spacing:.04em;text-transform:uppercase}
+  /* diagnostic */
+  .diag{background:var(--olive);color:#f3efe2;border-radius:20px;padding:30px 34px;margin-top:8px}
+  .diag .tag{color:var(--coral);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:12px}
+  .diag p{color:#dcd8c7;font-size:16px;max-width:840px}
+  /* KPI */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:18px}
+  .kpi .v{font-size:32px;font-weight:700;letter-spacing:-.02em}
+  .kpi .k{font-size:12.5px;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-top:3px;font-weight:500}
+  .kpi small{display:block;color:#948d82;font-size:12px;margin-top:6px}
+  .kpi.bad .v{color:var(--coral-d)} .kpi.ok .v{color:var(--green)} .kpi.warn .v{color:var(--amber)}
+  /* funnel */
+  .funnel{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+  .fstep{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+  .fstep .fv{font-size:27px;font-weight:700}.fstep .fk{font-size:12.5px;color:var(--sub)}
+  .fstep .drop{margin-top:8px;font-size:12px;font-weight:600;padding:3px 9px;border-radius:20px;display:inline-block}
+  .drop.red{background:var(--coral-bg);color:var(--coral-d)} .drop.amber{background:var(--amber-bg);color:#8a5c00} .drop.green{background:var(--green-bg);color:#1c6b3d}
+  /* tables */
+  .tbl-wrap{overflow-x:auto;border-radius:15px;border:1px solid var(--line)}
+  table{width:100%;border-collapse:collapse;background:var(--card);font-size:13.5px;min-width:640px}
+  th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:#f7f1e8;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--sub);font-weight:600;white-space:nowrap}
+  td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  .cn{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--ink)}
+  .url{font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--coral-d);word-break:break-all}
+  .status{font-weight:700;font-size:11px;padding:3px 9px;border-radius:20px;white-space:nowrap}
+  .s-scale{background:var(--green-bg);color:#1c6b3d}.s-hold{background:var(--amber-bg);color:#8a5c00}.s-cut{background:var(--coral-bg);color:var(--coral-d)}
+  .hi{color:var(--green);font-weight:700}.zero{color:#b0a99e}
+  .grp td{background:#faf5ee;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--sub)}
+  /* cards / creative */
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px;margin-top:10px}
+  .cc{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .media{aspect-ratio:1/1;background:#efe9e0 center/cover no-repeat;position:relative;cursor:pointer;overflow:hidden}
+  .media.tall{aspect-ratio:4/5}
+  .media:hover .play,.media:hover .zoom{transform:translate(-50%,-50%) scale(1.08)}
+  .play,.zoom{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(29,29,29,.62);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;transition:transform .15s;backdrop-filter:blur(2px)}
+  .zoom{width:40px;height:40px;font-size:15px;background:rgba(29,29,29,.5)}
+  .badge{position:absolute;top:10px;left:10px;background:rgba(29,29,29,.82);color:#fff;font-size:11px;font-weight:600;padding:4px 9px;border-radius:20px;z-index:2}
+  .badge.win{background:var(--green)}.badge.hook{background:var(--coral);color:#fff}
+  .fmt{position:absolute;bottom:10px;right:10px;background:rgba(255,255,255,.92);color:var(--ink);font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:20px;letter-spacing:.03em}
+  .cc .body{padding:16px 17px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .cc h4{font-size:16.5px;font-weight:600}
+  .m{display:flex;flex-wrap:wrap;gap:5px}
+  .m span{background:#f4efe7;border:1px solid var(--line);border-radius:8px;padding:3px 8px;font-size:12px;font-weight:600}
+  .m .g{background:var(--green-bg);border-color:#bfe3cd;color:#1c6b3d}.m .p{background:var(--coral-bg);border-color:#f3c3b4;color:var(--coral-d)}
+  .why{font-size:13.5px;color:var(--sub);margin:0}
+  .why b{color:var(--ink)}
+  .whybox{background:#f8f3ec;border-left:3px solid var(--coral);border-radius:8px;padding:9px 12px;font-size:13px}
+  .whybox i{font-style:normal;font-weight:700;color:var(--coral-d);text-transform:uppercase;font-size:10.5px;letter-spacing:.06em;display:block;margin-bottom:2px}
+  /* panels */
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-top:16px}
+  .panel.cream{background:var(--cream);border-color:#f3d6bf}
+  .panel.olive{background:var(--olive);color:#eee9da}.panel.olive h4,.panel.olive b{color:#fff}
+  .panel.coralp{background:var(--coral-bg);border-color:#f3c3b4}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  ul.clean{list-style:none;padding:0;margin:8px 0 0}ul.clean li{padding:7px 0;border-bottom:1px dashed var(--line);font-size:14px}ul.clean li:last-child{border-bottom:none}
+  ul.clean li::before{content:"▸";color:var(--coral);font-weight:700;margin-right:8px}
+  .flag{background:var(--coral-bg);border:1px solid #f3c3b4;color:#8a2c12;border-radius:11px;padding:11px 15px;font-size:13.5px;margin-top:14px}
+  .flag b{color:var(--coral-d)}
+  /* headline bank */
+  .angle{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;margin-top:14px}
+  .angle .ah{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .angle h4{font-size:18px;font-weight:700}
+  .angle .prov{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:20px}
+  .prov.win{background:var(--green-bg);color:#1c6b3d}.prov.test{background:var(--amber-bg);color:#8a5c00}
+  .angle .mech{font-size:13.5px;color:var(--sub);margin:6px 0 12px}
+  .hlist{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .hlist .h{background:#faf5ee;border:1px solid var(--line);border-left:3px solid var(--coral);border-radius:9px;padding:9px 13px;font-size:14px;font-weight:600}
+  .ptext{margin-top:12px;font-size:13px;color:var(--sub);background:#f8f3ec;border-radius:9px;padding:11px 14px}
+  .ptext b{color:var(--ink)}
+  /* brief */
+  .brief{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:0;margin-top:18px;overflow:hidden}
+  .brief .bh{background:var(--olive);color:#fff;padding:18px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+  .brief .bh h4{font-size:19px;color:#fff;font-weight:700}
+  .brief .bh .pill{background:var(--coral);color:#fff;font-size:11px;font-weight:700;padding:5px 11px;border-radius:20px;text-transform:uppercase;letter-spacing:.04em}
+  .brief .bb{padding:20px 24px}
+  .brow{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .brow:last-child{border-bottom:none}
+  .brow .bk{font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--sub);padding-top:2px}
+  .beats{margin:0;padding:0;list-style:none}
+  .beats li{padding:4px 0;font-size:13.5px}.beats li b{color:var(--coral-d);font-variant-numeric:tabular-nums}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}.chips span{background:#f4efe7;border:1px solid var(--line);border-radius:7px;padding:3px 9px;font-size:12.5px}
+  .dd{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:4px}
+  .dd .do{background:var(--green-bg);border-radius:9px;padding:10px 13px}.dd .dont{background:var(--coral-bg);border-radius:9px;padding:10px 13px}
+  .dd h5{margin:0 0 5px;font-size:12px;text-transform:uppercase;letter-spacing:.05em}.dd .do h5{color:#1c6b3d}.dd .dont h5{color:var(--coral-d)}
+  .dd ul{margin:0;padding-left:16px;font-size:13px}.dd li{margin:3px 0}
+  /* competitor */
+  .comp{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px}
+  .brand{font-size:12px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:var(--coral-d)}
+  .runtime{font-size:11px;font-weight:700;color:#1c6b3d;background:var(--green-bg);padding:3px 8px;border-radius:20px}
+  .teardown{font-size:13px;margin-top:2px}
+  .teardown div{padding:5px 0;border-bottom:1px dashed var(--line)}.teardown div:last-child{border-bottom:none}
+  .teardown b{color:var(--ink);font-size:11px;text-transform:uppercase;letter-spacing:.04em;display:block;color:var(--sub)}
+  .steal{color:var(--coral-d);font-weight:600}
+  /* concepts */
+  .concepts{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+  .concept{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+  .concept .num{font-weight:700;font-size:12px;color:var(--coral-d);letter-spacing:.03em}
+  .concept .top{padding:17px 19px 6px}.concept h4{font-size:17px;margin:5px 0 6px;font-weight:700}.concept .desc{font-size:13px;color:var(--sub)}
+  .mock{margin:12px 19px 0;border-radius:12px;padding:24px 20px;color:#fff;min-height:150px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+  .mock .lock{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.9;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+  .mock .lock .md{width:11px;height:11px;border-radius:50%;background:currentColor;box-shadow:inset -3px -1px 0 rgba(0,0,0,.25)}
+  .mock .hl{font-weight:800;font-size:23px;line-height:1.07}
+  .mock .sl{font-size:12.5px;opacity:.92;margin-top:9px}
+  .mock .cta{align-self:flex-start;margin-top:15px;background:#fff;color:var(--ink);font-weight:700;font-size:12px;padding:7px 14px;border-radius:20px}
+  .concept .vars{padding:14px 19px 18px}
+  .concept .vars .lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--coral-d);margin-bottom:6px}
+  .concept .vars ol{margin:0;padding-left:18px;font-size:13px}.concept .vars li{margin:5px 0}
+  .concept .send{font-size:12px;color:var(--sub);margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}.concept .send b{color:var(--ink)}
+  /* standards */
+  .std{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:14px}
+  .std .c{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:20px 22px}
+  .std .c h4{font-size:15px;text-transform:uppercase;letter-spacing:.05em;color:var(--coral-d);margin-bottom:10px}
+  .std .c ol{margin:0;padding-left:18px}.std .c li{margin:7px 0;font-size:14px}
+  .std .c p{font-size:14px;color:var(--sub);margin:0}
+  footer{padding:30px 0 60px;text-align:center;color:#948d82;font-size:12.5px}
+  /* modal */
+  .modal{position:fixed;inset:0;background:rgba(20,18,12,.9);z-index:100;display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(4px)}
+  .modal.open{display:flex}
+  .modal .inner{max-width:min(880px,94vw);max-height:92vh;display:flex;flex-direction:column;align-items:center;gap:12px}
+  .modal img,.modal video{max-width:100%;max-height:84vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);background:#000}
+  .modal iframe{border:none;border-radius:12px;background:#000;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+  .modal .cap{color:#f0ece0;font-size:14px;text-align:center;max-width:600px}
+  .modal .cap a{color:var(--coral)}
+  .modal .x{position:fixed;top:18px;right:22px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;border:none;font-size:22px;cursor:pointer}
+  .modal .x:hover{background:var(--coral)}
+  @media(max-width:760px){.two,.three,.hlist,.funnel,.dd{grid-template-columns:1fr}.funnel{grid-template-columns:1fr 1fr}.brow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brandrow"><span class="moon"></span> <b>Luna Naturals</b> <span>× Skyvane · Paid Social</span></div>
+    <h1>Mosquito Patch for Kids<br><span class="thin">LP &amp; Creative Report</span></h1>
+    <p class="subhead">A launch-phase diagnostic of every campaign, landing page and creative since go-live — plus the full creative-team brief to fix the funnel and earn the scale.</p>
+    <div class="meta-strip">
+      <div class="m"><i>Window</i><b>Launch → 30 Jun 2026</b></div>
+      <div class="m"><i>Account</i><b>act 1372844401337290</b></div>
+      <div class="m"><i>Spend</i><b>$1,641.95</b></div>
+      <div class="m"><i>Purchases</i><b>3 · $118.78</b></div>
+      <div class="m"><i>Blended ROAS</i><b>0.07</b></div>
+      <div class="m"><i>Stage</i><b>Pre-scale · fix &amp; feed</b></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc"><div class="wrap">
+  <a href="#overall">1 · Overall</a><a href="#campaign">2 · Campaigns</a><a href="#lp">3 · Landing Pages</a>
+  <a href="#creative">4 · Creative</a><a href="#headlines">5.1 · Iterate</a><a href="#competitor">5.2 · Competitors</a>
+  <a href="#concept">5.3 · New Concept</a><a href="#reddit">5.4 · Reddit VoC</a><a href="#standards">Standards</a>
+</div></nav>
+
+<!-- OVERALL -->
+<section id="overall">
+  <div class="wrap">
+    <span class="kicker">01 · Overall</span>
+    <h2>The hook is solved. The page is the leak.</h2>
+    <p class="lead">Across the launch window we spent <b>$1,641.95</b> and drove <b>482 landing-page views</b> for <b>3 purchases</b> — a <b>0.07 blended ROAS</b>. The number is ugly, but the diagnosis is clean and fixable: cheap, high-intent traffic is arriving and then falling out between the page and the cart.</p>
+    <div class="kpis">
+      <div class="kpi bad"><div class="v">0.07</div><div class="k">ROAS</div><small>Blended, lifetime</small></div>
+      <div class="kpi"><div class="v">$1,642</div><div class="k">Spend</div><small>$1,613 patch · $29 tick</small></div>
+      <div class="kpi bad"><div class="v">3</div><div class="k">Purchases</div><small>$118.78 revenue</small></div>
+      <div class="kpi warn"><div class="v">$547</div><div class="k">CPA</div><small>Target &lt; $25</small></div>
+      <div class="kpi ok"><div class="v">$39.59</div><div class="k">AOV</div><small>2× the $19.99 SKU → bundle lands</small></div>
+      <div class="kpi"><div class="v">482</div><div class="k">Landing-page views</div><small>Traffic is not the problem</small></div>
+    </div>
+    <h3>Where the money leaks</h3>
+    <div class="funnel">
+      <div class="fstep"><div class="fv">482</div><div class="fk">Landing-page views</div></div>
+      <div class="fstep"><div class="fv">35</div><div class="fk">Add to cart</div><span class="drop red">7.3% of LPV · main leak</span></div>
+      <div class="fstep"><div class="fv">13</div><div class="fk">Checkouts</div><span class="drop amber">37% of ATC</span></div>
+      <div class="fstep"><div class="fv">3</div><div class="fk">Purchases</div><span class="drop red">23% of checkout</span></div>
+    </div>
+    <div class="diag">
+      <span class="tag">The one-line read</span>
+      <p style="margin-top:8px">Only <b>7 in 100</b> people who reach a page add to cart, and only <b>1 in 4</b> who start checkout finish. Top-of-funnel is healthy — story-video ads pull <b>28–35% CTR at $12–37 CPM</b>. So the fix is <b>page, offer and checkout</b>, not more hooks. Every recommendation below is pointed at that gap.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CAMPAIGNS -->
+<section id="campaign">
+  <div class="wrap">
+    <span class="kicker">02 · Campaign Performance</span>
+    <h2>One campaign is carrying the signal</h2>
+    <p class="lead">Five campaigns ran during launch across three structures. Full campaign names below, exactly as they appear in Ads Manager. The <b>New PDP CBO</b> is the only one returning real ROAS and holds 2 of the 3 total sales.</p>
+    <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Campaign name (full)</th><th>Struct.</th><th class="num">Spend</th><th class="num">ROAS</th><th class="num">Purch</th><th class="num">CPA</th><th class="num">LPV→Purch</th><th>Read</th></tr></thead>
+      <tbody>
+        <tr><td class="cn">Luna Naturals_New PDP_Mosquito Patch for Kids_CBO_27Jun26</td><td>CBO</td><td class="num">$309.11</td><td class="num hi">0.26</td><td class="num">2</td><td class="num">$154.56</td><td class="num">2.38%</td><td><span class="status s-scale">Scale direction</span></td></tr>
+        <tr><td class="cn">Luna Naturals_LP Testing_Mosquito Patch for Kids_ABO_23Jun26</td><td>ABO</td><td class="num">$681.68</td><td class="num">0.06</td><td class="num">1</td><td class="num">$681.68</td><td class="num">0.69%</td><td><span class="status s-hold">Keep · narrow</span></td></tr>
+        <tr><td class="cn">Luna Naturals_getlunanatural.co_Mosquito Patch for Kids_CBO_19Jun26</td><td>CBO</td><td class="num">$357.24</td><td class="num zero">0.00</td><td class="num">0</td><td class="num zero">—</td><td class="num zero">0%</td><td><span class="status s-cut">Cut · rebuild</span></td></tr>
+        <tr><td class="cn">Luna Naturals_TSL_Mosquito Patch for Kids_CBO_22Jun26</td><td>CBO</td><td class="num">$264.84</td><td class="num zero">0.00</td><td class="num">0</td><td class="num zero">—</td><td class="num zero">0%</td><td><span class="status s-hold">Re-point to /kids</span></td></tr>
+        <tr><td class="cn">Luna Naturals_LP Testing_Bug Tick Repellent Spray_ABO_30Jun26</td><td>ABO</td><td class="num">$29.08</td><td class="num zero">—</td><td class="num">0</td><td class="num zero">—</td><td class="num zero">—</td><td><span class="status s-hold">Just launched</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="two" style="margin-top:20px">
+      <div class="panel"><h4 style="font-size:16px">What's working</h4><ul class="clean">
+        <li><b>New /kids PDP + BOGO</b> quadrupled CVR vs the old PDP (2.38% vs 0%).</li>
+        <li><b>ABO advertorial structure</b> isolates pages cleanly — that is how we found the pediatrician page.</li>
+        <li><b>AOV $39.59</b> on a $19.99 SKU means the bundle/BOGO is landing on the buyers we do get.</li>
+      </ul></div>
+      <div class="panel coralp"><h4 style="font-size:16px">What's bleeding</h4><ul class="clean">
+        <li><b>$622</b> in the original-launch + TSL CBOs returned <b>zero</b> sales — great clicks, wrong destination.</li>
+        <li>CBO spread budget across too many starved statics (many under $2/day of delivery).</li>
+        <li>No campaign is near a 1.0 ROAS floor. This is a fix-the-page moment, not a scale-the-winner moment.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- LANDING PAGES -->
+<section id="lp">
+  <div class="wrap">
+    <span class="kicker">03 · Landing Page Performance</span>
+    <h2>Every landing page, full URL, ranked</h2>
+    <p class="lead">The ABO test pointed the same creatives at 15+ destinations; the CBO creative-test adsets all fed the default sales page. Two pages converted — a <b>story/advertorial</b> and the <b>new dedicated /kids PDP</b> — everything else took spend to a 0% close.</p>
+    <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Landing page — full URL</th><th>Type</th><th class="num">Spend</th><th class="num">LPV</th><th class="num">ATC</th><th class="num">CO</th><th class="num">Purch</th><th class="num">CVR</th><th>Read</th></tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="9">Converters — scale these</td></tr>
+        <tr><td class="url">getlunanatural.co/lunanaturals/kids</td><td>New PDP</td><td class="num">$309.11</td><td class="num">84</td><td class="num">5</td><td class="num">3</td><td class="num">2</td><td class="num hi">2.38%</td><td><span class="status s-scale">Best volume</span></td></tr>
+        <tr><td class="url">get.lunanaturals.co/articles/pediatrician</td><td>Advertorial</td><td class="num">$101.69</td><td class="num">13</td><td class="num">3</td><td class="num">2</td><td class="num">1</td><td class="num hi">7.69%</td><td><span class="status s-scale">Best CVR</span></td></tr>
+        <tr class="grp"><td colspan="9">Default sales page — fed by every CBO creative-test adset → getlunanatural.co/lunanaturals</td></tr>
+        <tr><td class="url">getlunanatural.co/lunanaturals <small>(TSL Batch 1)</small></td><td>Video→PDP</td><td class="num">$242.22</td><td class="num">143</td><td class="num">2</td><td class="num">6</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Re-point to /kids</span></td></tr>
+        <tr><td class="url">getlunanatural.co/lunanaturals <small>(UGC)</small></td><td>Video→PDP</td><td class="num">$149.89</td><td class="num">51</td><td class="num">—</td><td class="num">1</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Re-point to /kids</span></td></tr>
+        <tr><td class="url">getlunanatural.co/lunanaturals <small>(TSL Batch 2)</small></td><td>Video→PDP</td><td class="num">$22.62</td><td class="num">30</td><td class="num">—</td><td class="num">—</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Re-point</span></td></tr>
+        <tr><td class="url">getlunanatural.co/lunanaturals <small>(Static/Animation ×8 adsets)</small></td><td>Static→PDP</td><td class="num">$215.85</td><td class="num">28</td><td class="num">—</td><td class="num">—</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Pause statics</span></td></tr>
+        <tr class="grp"><td colspan="9">Old PDP — retire</td></tr>
+        <tr><td class="url">get.lunanaturals.co</td><td>PDP (SPA)</td><td class="num">$117.66</td><td class="num">41</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Retire</span></td></tr>
+        <tr class="grp"><td colspan="9">Advertorials (ABO) — one winner, rest re-test on /kids offer</td></tr>
+        <tr><td class="url">get.lunanaturals.co/articles/deet-switch</td><td>Advertorial</td><td class="num">$79.74</td><td class="num">18</td><td class="num">0</td><td class="num">1</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-hold">Re-test</span></td></tr>
+        <tr><td class="url">get.lunanaturals.co/articles/bug-spray-label</td><td>Advertorial</td><td class="num">$48.74</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Pause</span></td></tr>
+        <tr><td class="url">get.lunanaturals.co/articles/melts-plastic</td><td>Advertorial</td><td class="num">$45.72</td><td class="num">7</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Pause</span></td></tr>
+        <tr class="grp"><td colspan="9">Listicles (ABO) — no closes, pause</td></tr>
+        <tr><td class="url">get.lunanaturals.co/reasons/natural-bug-products-tested</td><td>Listicle</td><td class="num">$60.39</td><td class="num">12</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Pause</span></td></tr>
+        <tr><td class="url">get.lunanaturals.co/reasons/questions-before-you-spray</td><td>Listicle</td><td class="num">$59.20</td><td class="num">14</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Pause</span></td></tr>
+        <tr><td class="url">get.lunanaturals.co/reasons/bug-spray-mistakes</td><td>Listicle</td><td class="num">$56.67</td><td class="num">21</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Pause</span></td></tr>
+        <tr><td class="url">get.lunanaturals.co/reasons/where-parents-stash-patches</td><td>Listicle</td><td class="num">$47.33</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Pause</span></td></tr>
+        <tr><td class="url">get.lunanaturals.co/reasons/ditch-the-bug-spray</td><td>Listicle</td><td class="num">$46.07</td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Pause</span></td></tr>
+        <tr><td class="url">getlunanatural.co/lunanaturals/9reasons</td><td>Listicle</td><td class="num">$18.47</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num zero">0%</td><td><span class="status s-cut">Pause</span></td></tr>
+        <tr class="grp"><td colspan="9">Tick Spray (new, 30 Jun) — reading only</td></tr>
+        <tr><td class="url">get.lunanaturals.co/ticks</td><td>PDP</td><td class="num">$12.27</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num zero">—</td><td><span class="status s-hold">New</span></td></tr>
+        <tr><td class="url">get.lunanaturals.co/reasons/tick-defense</td><td>Listicle</td><td class="num">$8.54</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num zero">—</td><td><span class="status s-hold">New</span></td></tr>
+        <tr><td class="url">get.lunanaturals.co/articles/tick-season</td><td>Advertorial</td><td class="num">$8.27</td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num zero">—</td><td><span class="status s-hold">New</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="panel cream"><b>The single highest-leverage move.</b> The <code>TSL Batch 1</code> adset alone drove <b>143 landing-page views</b> — the most in the account — into <code>getlunanatural.co/lunanaturals</code> and closed <b>zero</b>. Re-point every high-CTR TSL ad at <b>getlunanatural.co/lunanaturals/kids</b> (or the pediatrician advertorial → /kids checkout) and existing traffic should convert without spending a dollar more on reach.</div>
+    <div class="flag"><b>Fix before scale:</b> LPV→ATC is 7.3% and checkout→purchase is 23%. Audit /kids for mobile load speed, a visible BOGO/price anchor above the fold, express-pay at checkout (Shop Pay / Apple Pay), and a trust bar (reviews · pediatrician-reviewed · DEET-free). These numbers are what stand between 0.26 and 1.0+.</div>
+  </div>
+</section>
+
+<!-- CREATIVE -->
+<section id="creative">
+  <div class="wrap">
+    <span class="kicker">04 · Creative Performance</span>
+    <h2>Story-video advertorials are the click engine</h2>
+    <p class="lead">The winners are all long-form "true story" videos (TSL) or founder UGC. They pull enormous CTRs at low CPMs — the account's entire click advantage lives here. <b>Tap any creative to view it full-size or play the video.</b></p>
+    <div class="cards">
+
+      <div class="cc">
+        <div class="media" data-mt="img" data-src="assets/creatives/pediatricians-daughter_TSL03.png" data-cap="TSL-03 · The Pediatrician's Daughter — advertorial">
+          <span class="badge win">Top spend · converter</span><span class="fmt">Advertorial</span><div class="zoom">⤢</div></div>
+        <div class="body">
+          <h4>The Pediatrician's Daughter <small>(TSL-03)</small></h4>
+          <div class="m"><span class="g">CTR 31–34%</span><span class="g">CPM $24–37</span><span>Spend $251</span><span>1 sale</span></div>
+          <div class="whybox"><i>Why it works</i>A pediatric nurse who administers DEET at camp admits she won't use it on her own kids. Borrowed authority + "insider defecting" tension is the most persuasive combo in the category, and the confession format holds attention long enough to sell the mechanism. Highest reach and click volume in the account.</div>
+        </div>
+      </div>
+
+      <div class="cc">
+        <div class="media" data-mt="img" data-src="assets/creatives/daycare-note_TSL06.png" data-cap="TSL-06 · The Daycare Note — advertorial">
+          <span class="badge hook">Best hook efficiency</span><span class="fmt">Advertorial</span><div class="zoom">⤢</div></div>
+        <div class="body">
+          <h4>The Daycare Note <small>(TSL-06)</small></h4>
+          <div class="m"><span class="p">CTR 35.2%</span><span class="p">CPM $11.88</span><span>Spend $28</span><span>57 LPV</span></div>
+          <div class="whybox"><i>Why it works</i>Opens on a documented, specific proof point — "a note home: 8 mosquito bites in 45 minutes." A hard number plus an institutional villain (the daycare can't spray 8 toddlers) creates pure curiosity at the cheapest CPM in the account. Badly under-fed at $28.</div>
+        </div>
+      </div>
+
+      <div class="cc">
+        <div class="media" data-mt="fb" data-src="https://www.facebook.com/61589362212280/videos/3373089896204577/" data-poster="assets/creatives/pediatricians-say-deet_0512-2.jpg" data-cap="0512-2 · What Pediatricians Say About DEET — 46s video">
+          <span class="badge win">Best ROAS</span><span class="fmt">Video · 46s</span><div class="play">▶</div></div>
+        <div class="body">
+          <h4>What Pediatricians Say About DEET <small>(0512-2)</small></h4>
+          <div class="m"><span class="g">ROAS 0.53</span><span>CTR 3.3%</span><span>Spend $73</span><span>1 sale</span></div>
+          <div class="whybox"><i>Why it works</i>Calmly explains what pediatric guidance actually says, then positions the patch as the gentle option the parent's instinct already wanted. Lower CTR because it is not sensational, but the highest close rate because it dismantles the safety objection head-on. This is the closer.</div>
+        </div>
+      </div>
+
+      <div class="cc">
+        <div class="media" data-mt="img" data-src="assets/creatives/tball-game_TSL08.png" data-cap="TSL-08 · The T-Ball Game — advertorial">
+          <span class="badge hook">Hook 27.5%</span><span class="fmt">Advertorial</span><div class="zoom">⤢</div></div>
+        <div class="body">
+          <h4>The T-Ball Game <small>(TSL-08)</small></h4>
+          <div class="m"><span class="p">CTR 27.5%</span><span>CPM $35</span><span>Spend $20</span></div>
+          <div class="whybox"><i>Why it works</i>A dad-coach watches his son cry in the outfield, then grin after the patches. Emotional narrative arc with a clean before/after payoff and a built-in occasion (youth sports). Strong hook, barely funded — add to the scale set once /kids is fixed.</div>
+        </div>
+      </div>
+
+      <div class="cc">
+        <div class="media" data-mt="fb" data-src="https://www.facebook.com/61589362212280/videos/2381676498983641/" data-poster="assets/creatives/bug-protection-no-chem_UGC.jpg" data-cap="UGC3 · Bug Protection Without the Chemicals — 37s video">
+          <span class="badge">Top-spend UGC</span><span class="fmt">Video · 37s</span><div class="play">▶</div></div>
+        <div class="body">
+          <h4>Bug Protection Without the Chemicals <small>(UGC3)</small></h4>
+          <div class="m"><span>CTR ~6%</span><span>CPM ~$300</span><span>Spend $302</span><span>1 sale</span></div>
+          <div class="whybox"><i>Why it works</i>Clear "third option, built for kids" benefit UGC that names the mechanism (mosquitoes hunt by scent; plant oils mask the trail). It converts, but clicks are 8× more expensive than the TSL frames — keep as a UGC anchor, don't over-index budget here.</div>
+        </div>
+      </div>
+
+      <div class="cc">
+        <div class="media" data-mt="fb" data-src="https://www.facebook.com/61589362212280/videos/1295996799190514/" data-poster="assets/creatives/deet-free-protection_UGC0609.jpg" data-cap="UGC 0609 · DEET-Free Bug Protection for Kids — 41s video">
+          <span class="badge">Volume UGC</span><span class="fmt">Video · 41s</span><div class="play">▶</div></div>
+        <div class="body">
+          <h4>DEET-Free Bug Protection for Kids <small>(UGC 0609)</small></h4>
+          <div class="m"><span>CTR ~7%</span><span>Spend $134</span><span>0 sales</span></div>
+          <div class="whybox"><i>Why it works</i>Relatable parent-voice switch story ("I stopped spraying, not going back") with a fast benefit list. Drove views but no closes on the old funnel — a prime candidate to re-run against /kids before judging it a loser.</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="flag" style="margin-top:18px"><b>Compliance guardrail:</b> the nurse and pediatrician creatives lean on medical authority. Keep them as personal choice ("what I do for my own kids") and ingredient facts (citronella oil · on clothing, not skin). Never a medical claim to prevent bites or disease. Borrow the format, not a health claim.</div>
+  </div>
+</section>
+
+<!-- HEADLINES -->
+<section id="headlines">
+  <div class="wrap">
+    <span class="kicker">05 · Next Creative</span>
+    <h2>The build plan: iterate, copy, invent, ride the moment</h2>
+    <p class="lead">Everything forward-looking lives here in four moves — <b>5.1</b> iterate the proven winners, <b>5.2</b> copy the formats competitors keep on air, <b>5.3</b> a fresh 9-technique concept line, and <b>5.4</b> real parent voice turned into timely static briefs.</p>
+    <h3 style="margin-top:36px;font-size:24px">5.1 · Iterate the Winners <span class="tag">Angles &amp; headline bank</span></h3>
+    <p class="lead" style="margin:8px 0 18px">Every headline below is pulled from a live winner or built on its DNA — six angles with the mechanism behind each. This is the copy fuel for the shot briefs that follow.</p>
+
+    <div class="angle">
+      <div class="ah"><h4>① Medical insider / authority</h4><span class="prov win">Proven — all 3 converters live here</span></div>
+      <p class="mech">Borrowed credibility plus an "insider defecting from the system" tension. The most persuasive angle in the category. Guardrail: personal choice + ingredient facts, never a bite/disease claim.</p>
+      <div class="hlist">
+        <div class="h">A NICU Nurse Won't Put Repellent On A Baby's Skin</div>
+        <div class="h">What This Nurse Uses on Her Own Kids</div>
+        <div class="h">I Sign the DEET Form at Camp. I Don't Use It on My Kids.</div>
+        <div class="h">The Repellent a Camp Nurse Keeps in Her Own Bag</div>
+        <div class="h">What Pediatricians Quietly Say About Spray and Toddlers</div>
+        <div class="h">A Pediatrician Stopped Counting the Ticks She Pulled Off Kids</div>
+      </div>
+      <div class="ptext"><b>Primary-text starter:</b> "I'm a pediatric nurse. I've signed off on the camp DEET requirement for nine years. Last summer I quietly stopped using it on my own two kids. Here's what I switched to."</div>
+    </div>
+
+    <div class="angle">
+      <div class="ah"><h4>② Kid-sticker / "they actually keep it on"</h4><span class="prov win">Proven · category's most durable frame</span></div>
+      <p class="mech">Turns a chore into a toy. Kids self-apply and keep it on because it reads as a sticker they chose. NATPAT has run this frame for 18 months straight — it is the most defensible position Luna can own.</p>
+      <div class="hlist">
+        <div class="h">They Think It's a Sticker. Mosquitoes Think It's a Wall.</div>
+        <div class="h">The Bug Protection Your Kid Actually Asks to Put On</div>
+        <div class="h">90 Stickers. Zero Bug-Spray Fights.</div>
+        <div class="h">Peel, Stick, Send Them Outside</div>
+        <div class="h">The Only Sticker That Sends Mosquitoes Packing</div>
+        <div class="h">Your Toddler Will Fight the Spray. Not the Sticker.</div>
+      </div>
+    </div>
+
+    <div class="angle">
+      <div class="ah"><h4>③ Objection reversal / DEET-free</h4><span class="prov win">Proven · handles the #1 hesitation</span></div>
+      <p class="mech">Removes the single biggest parent objection — chemicals on skin — before it's raised. Pairs the "on the shirt, not the skin" mechanism with the clean ingredient story.</p>
+      <div class="hlist">
+        <div class="h">No DEET. Nothing to Wash Off Before Bed.</div>
+        <div class="h">The Bug Repellent That Never Touches Their Skin</div>
+        <div class="h">Bug Patches That Stick to the Shirt, Not the Baby</div>
+        <div class="h">Skip the Spray Aisle. Skip the Chemical Cloud.</div>
+        <div class="h">Citronella on a Sticker. That's the Whole Ingredient List.</div>
+        <div class="h">Because Skin Goes in Mouths. Shirts Don't.</div>
+      </div>
+    </div>
+
+    <div class="angle">
+      <div class="ah"><h4>④ Social proof / the switch</h4><span class="prov test">Add a hard number to match rivals</span></div>
+      <p class="mech">Herd validation. Competitors lean hard on "millions sold / 10,000+ reviews." Luna surfaces no hard number yet — attach a real one to every ad and to /kids.</p>
+      <div class="hlist">
+        <div class="h">Why 50,000+ Parents Switched From Spray to Stickers</div>
+        <div class="h">The Bug-Spray Alternative Parents Won't Shut Up About</div>
+        <div class="h">The Yellow Can Is Quietly Getting Retired in These Homes</div>
+        <div class="h">Join the Parents Who Ditched the Spray Fight for Good</div>
+      </div>
+    </div>
+
+    <div class="angle">
+      <div class="ah"><h4>⑤ Story / curiosity open</h4><span class="prov win">Proven · the account's cheapest clicks</span></div>
+      <p class="mech">Open loop plus specificity. These headlines produced the 28–35% CTRs at sub-$40 CPMs. Best as thumbnail/hook text on the TSL series.</p>
+      <div class="hlist">
+        <div class="h">The Daycare Sent a Note Home About the Bites</div>
+        <div class="h">The Bug-Bite Problem I Couldn't Solve in 24 Years</div>
+        <div class="h">She Watched the Tick Map Spread Across Her County</div>
+        <div class="h">He Got Eaten Alive at Every Game. Until the Stickers.</div>
+        <div class="h">This Nurse Found a Tick on a Child Who Never Left the Yard</div>
+      </div>
+    </div>
+
+    <div class="angle">
+      <div class="ah"><h4>⑥ Occasion / seasonal</h4><span class="prov test">Expands audiences (grandparents, sports)</span></div>
+      <p class="mech">Contextual relevance opens new audiences the data already rewards — 45+ and grandparents convert best. Anchor to a specific moment.</p>
+      <div class="hlist">
+        <div class="h">Camp Requires DEET. Here's What I Send Instead.</div>
+        <div class="h">Grandma's Backyard Has a Mosquito Problem. Solved in 10 Seconds.</div>
+        <div class="h">T-Ball at 6pm in July. No Bites, No Bench.</div>
+        <div class="h">The Sticker That Made the Daycare Notes Stop</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATIVE BRIEFS -->
+<section id="iterate">
+  <div class="wrap">
+    <span class="kicker" style="background:#e6f1ea;color:#1c6b3d">5.1 · Iterate the Winners — Team Briefs</span>
+    <h2>Four briefs to shoot next</h2>
+    <p class="lead">Squeeze the proven winners first. These are production-ready briefs — hook, beat sheet, shot notes, specs, and destination — built from the angles above.</p>
+
+    <div class="brief">
+      <div class="bh"><h4>Brief 1 · The Nurse Series</h4><span class="pill">Priority 1 · Video</span></div>
+      <div class="bb">
+        <div class="brow"><div class="bk">Objective</div><div>Turn our single highest-reach creative (Pediatrician's Daughter) into a repeatable series so performance never depends on one video. Ship 4 narrators.</div></div>
+        <div class="brow"><div class="bk">Format</div><div><span class="chips"><span>9:16 master</span><span>4:5 + 1:1 cutdowns</span><span>45–60s prospecting</span><span>15s + 6s retargeting</span></span></div></div>
+        <div class="brow"><div class="bk">Hook (0–3s)</div><div>Static text-on-screen confession, plain background, real voice. e.g. "I'm a NICU nurse. I won't put repellent on a baby's skin. Here's what I use instead." No music sting — let the sentence do it.</div></div>
+        <div class="brow"><div class="bk">Beat sheet</div><div><ul class="beats">
+          <li><b>0–3s</b> Confession hook (the line above)</li>
+          <li><b>3–12s</b> Credibility + the tension ("I administer DEET at work / I sign the camp form")</li>
+          <li><b>12–30s</b> The turn: why she chose differently for her own kids (feel, warning label, hands-in-mouth)</li>
+          <li><b>30–45s</b> Mechanism + product: citronella patch, on clothing not skin, 8 hrs, 90 in a pack</li>
+          <li><b>45–55s</b> Honest disclaimer ("not medical advice, it's a sticker") → soft CTA</li>
+        </ul></div></div>
+        <div class="brow"><div class="bk">Narrators</div><div><span class="chips"><span>NICU nurse</span><span>ER nurse</span><span>School nurse</span><span>Camp medic</span></span> Same beat sheet, new person + setting each.</div></div>
+        <div class="brow"><div class="bk">Visual</div><div>Handheld or locked-off talking head, natural light, scrubs or everyday. Insert shots: patch peeling off sheet, sticking to a shirt sleeve, kid running outside. Captions burned in (sound-off viewing).</div></div>
+        <div class="brow"><div class="bk">On-screen text</div><div>Key line reinforced at 3s, 30s, and CTA. Ingredient super: "Citronella oil · on clothing, not skin · 8 hrs."</div></div>
+        <div class="brow"><div class="bk">Offer / CTA</div><div>"90 patches, $19.99 — see the current bundle." BOGO if live. CTA button: <b>Shop the patch →</b></div></div>
+        <div class="brow"><div class="bk">Destination</div><div><span class="url">getlunanatural.co/lunanaturals/kids</span></div></div>
+        <div class="brow"><div class="bk">Do / Don't</div><div class="dd">
+          <div class="do"><h5>Do</h5><ul><li>Keep it personal ("what I do")</li><li>Name the ingredient plainly</li><li>Let the hook be silent text</li></ul></div>
+          <div class="dont"><h5>Don't</h5><ul><li>Claim it prevents bites/disease</li><li>Imply clinical endorsement</li><li>Over-produce — raw = trust</li></ul></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="brief">
+      <div class="bh"><h4>Brief 2 · The Daycare Note (scale the cheapest hook)</h4><span class="pill">Priority 1 · Video</span></div>
+      <div class="bb">
+        <div class="brow"><div class="bk">Objective</div><div>TSL-06 pulled 35% CTR at an $11.88 CPM on only $28. It is under-fed by 5–10×. Raise budget and spin occasion variants that hold the exact winning opening frame.</div></div>
+        <div class="brow"><div class="bk">Format</div><div><span class="chips"><span>9:16 + 4:5</span><span>40–55s</span><span>15s cutdown</span></span></div></div>
+        <div class="brow"><div class="bk">Hook (0–3s)</div><div>Hold the "note home" visual — a yellow incident slip, close-up. VO: "The daycare sent a note home. Eight mosquito bites. In 45 minutes."</div></div>
+        <div class="brow"><div class="bk">Beat sheet</div><div><ul class="beats">
+          <li><b>0–3s</b> The note + the number</li>
+          <li><b>3–15s</b> The impossible ask (one teacher can't spray 8 toddlers)</li>
+          <li><b>15–35s</b> The switch: "the patch is already on the child when they arrive"</li>
+          <li><b>35–50s</b> Receipt: "3 patches · 10 seconds · 0 notes since" → CTA</li>
+        </ul></div></div>
+        <div class="brow"><div class="bk">Occasion swaps</div><div><span class="chips"><span>Summer camp</span><span>Grandma's backyard</span><span>The T-ball field</span><span>Sunday soccer</span></span></div></div>
+        <div class="brow"><div class="bk">Visual</div><div>Prop-led: the note, the yellow spray can with its warning label, patches on a small shirt. End on kid outside, bite-free. On-screen sticker-count receipt.</div></div>
+        <div class="brow"><div class="bk">Destination / CTA</div><div><span class="url">getlunanatural.co/lunanaturals/kids</span> · "Stop the notes → Shop the patch"</div></div>
+      </div>
+    </div>
+
+    <div class="brief">
+      <div class="bh"><h4>Brief 3 · The Objection Closer (retargeting)</h4><span class="pill">Priority 2 · Advertorial video</span></div>
+      <div class="bb">
+        <div class="brow"><div class="bk">Objective</div><div>Rebuild 0512-2 (best ROAS, 0.53) as a calm, fact-led closer for warm traffic — the video that dismantles the "is it safe / does it work" objection.</div></div>
+        <div class="brow"><div class="bk">Format</div><div><span class="chips"><span>4:5 + 1:1</span><span>40–50s</span><span>Advertorial edit</span></span> Match the pediatrician advertorial's look for scent-match with the page.</div></div>
+        <div class="brow"><div class="bk">Beat sheet</div><div><ul class="beats">
+          <li><b>0–4s</b> "Ever wonder why your pediatrician hesitates on bug spray for a baby?"</li>
+          <li><b>4–20s</b> Plain-language version of the guidance (least amount of the strongest stuff)</li>
+          <li><b>20–35s</b> Real-life gap: sprays drift, kids squirm, you never know how much landed</li>
+          <li><b>35–50s</b> Patch closes the gap: peel, stick to clothing, done → CTA</li>
+        </ul></div></div>
+        <div class="brow"><div class="bk">Also produce</div><div>A static "comparison" cutdown: spray mistakes (drift, reapply, DEET on toddler) vs peel-and-stick. Feed the retargeting set of the 13 ATC + checkout abandoners.</div></div>
+        <div class="brow"><div class="bk">Destination</div><div><span class="url">get.lunanaturals.co/articles/pediatrician</span> → /kids checkout</div></div>
+      </div>
+    </div>
+
+    <div class="brief">
+      <div class="bh"><h4>Brief 4 · Proof + Checklist Static Pack</h4><span class="pill">Priority 2 · Static</span></div>
+      <div class="bb">
+        <div class="brow"><div class="bk">Objective</div><div>Our statics under-use two formats that competitors run for a year: the scannable ✅ benefit checklist (BugMD) and the hard social-proof card (NATPAT "Millions Sold"). Build a 6-static pack for /kids.</div></div>
+        <div class="brow"><div class="bk">Format</div><div><span class="chips"><span>4:5 + 1:1</span><span>9:16 story w/ 4:5 safe zone</span></span></div></div>
+        <div class="brow"><div class="bk">Layouts</div><div><ul class="beats">
+          <li><b>A ·</b> Checklist: 5 green-checks (DEET-free · on clothing · 8 hrs · kid-safe · 90 pack) over hero patch shot</li>
+          <li><b>B ·</b> Proof card: "Trusted by [X]+ families · [rating]★" — insert the real number</li>
+          <li><b>C ·</b> Old-vs-new split: spray can (chemical cloud) vs patch on a shirt</li>
+          <li><b>D ·</b> Quantified value: "8 hours per patch · 90 in a pack · $19.99"</li>
+          <li><b>E ·</b> Offer card: BOGO / bundle anchor, price crossed</li>
+          <li><b>F ·</b> Testimonial quote card (real review, ★★★★★)</li>
+        </ul></div></div>
+        <div class="brow"><div class="bk">Brand</div><div>Coral <code>#F26A3E</code> CTAs, ink <code>#1D1D1D</code>, cream <code>#FFECDC</code>, Jost type. Real product photography only.</div></div>
+        <div class="brow"><div class="bk">Destination</div><div><span class="url">getlunanatural.co/lunanaturals/kids</span></div></div>
+      </div>
+    </div>
+
+    <div class="panel coralp"><h4 style="font-size:16px">Structural fixes that unlock all four</h4><ul class="clean">
+      <li><b>Consolidate</b> the CBO into one adset feeding /kids so budget stops starving winners.</li>
+      <li><b>Re-point</b> every high-CTR TSL ad off the old funnel — recover the 143+ wasted LPVs.</li>
+      <li><b>Add BOGO/bundle anchor + express-pay</b> to lift the 23% checkout close before spending on new reach.</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- COMPETITOR -->
+<section id="competitor">
+  <div class="wrap">
+    <span class="kicker">5.2 · Competitor Copying</span>
+    <h2>Steal the format the long-runners keep on air</h2>
+    <p class="lead">Pulled from live ad libraries across the natural-repellent category. <b>Tap any card to play the video or enlarge the static.</b> Each card ends in a <b class="steal">copy → brief</b> instruction: borrow the <b>format and structure</b> (testimonials, hard proof numbers, the "fun sticker" frame), never a competitor's specific claim.</p>
+
+    <h3>NATPAT / BuzzPatch <span class="tag">Direct rival</span></h3>
+    <p style="font-size:14px;color:var(--sub);max-width:780px">Same product — a citronella patch for kids. Their longest-running creatives stay live <b>16–18 months</b>, the strongest possible signal of what converts at scale.</p>
+    <div class="comp" style="margin-top:14px">
+      <div class="cc">
+        <div class="media tall" data-mt="video" data-src="assets/competitors/natpat_testimonial.mp4" data-poster="assets/competitors/natpat_mosquito-video.jpg" data-cap="NATPAT · &quot;The Willow Story&quot; testimonial — ran 16 months">
+          <span class="badge">Testimonial video</span><span class="fmt">▶ 35s</span><div class="play">▶</div></div>
+        <div class="body">
+          <div class="brand">NATPAT · BuzzPatch <span class="runtime">ran 16 mo</span></div>
+          <h4>"The Willow Story"</h4>
+          <div class="teardown">
+            <div><b>Format</b> Verified-customer testimonial UGC</div>
+            <div><b>Structure</b> Pain (kid attacked on the face as a baby) → old way is a fight → "these stickers are a game changer" → soft CTA</div>
+            <div><b>Why it works</b> A real parent's fear + relief carries more trust than any spec. Their single longest-running creative.</div>
+            <div class="steal">Steal → our nurse/daycare TSLs are the same DNA. Build the series (Brief 1) and never rely on one video.</div>
+          </div>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="media tall" data-mt="img" data-src="assets/competitors/natpat_millions-sold.jpg" data-cap="NATPAT · &quot;Millions Sold · 10,000+ 5★&quot; social-proof static">
+          <span class="badge">Social-proof static</span><span class="fmt">Static</span><div class="zoom">⤢</div></div>
+        <div class="body">
+          <div class="brand">NATPAT · BuzzPatch <span class="runtime">evergreen</span></div>
+          <h4>"Millions Sold · 10,000+ 5★"</h4>
+          <div class="teardown">
+            <div><b>Format</b> Proof-stack static, product hero</div>
+            <div><b>Why it works</b> Pure herd validation; removes risk at a glance in-feed.</div>
+            <div class="steal">Steal → Luna surfaces no hard number yet. Put a real review/family count on ads AND on /kids (Brief 4-B).</div>
+          </div>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="media tall" data-mt="video" data-src="assets/competitors/natpat_buzz-classic.mp4" data-poster="assets/competitors/natpat_buzz-old-video.jpg" data-cap="NATPAT · BuzzPatch classic demo — camping/cottage angle">
+          <span class="badge">Demo video</span><span class="fmt">▶ 37s</span><div class="play">▶</div></div>
+        <div class="body">
+          <div class="brand">NATPAT · BuzzPatch <span class="runtime">long-runner</span></div>
+          <h4>"Cottage &amp; Camping" demo</h4>
+          <div class="teardown">
+            <div><b>Format</b> Product demo + occasion framing</div>
+            <div><b>Why it works</b> "Avoid creams and sprays, discreetly place a sticker" — mechanism shown, not told, tied to a trip occasion.</div>
+            <div class="steal">Steal → occasion cutdowns (camp, grandma's, T-ball) for Brief 2.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Adjacent players <span class="tag">Formats worth borrowing</span></h3>
+    <div class="comp">
+      <div class="cc">
+        <div class="media tall" data-mt="img" data-src="assets/competitors/bugmd_family-checklist.jpg" data-cap="BugMD · Family-Approved ✅ checklist static">
+          <span class="badge">Checklist static</span><span class="fmt">Static</span><div class="zoom">⤢</div></div>
+        <div class="body">
+          <div class="brand">BugMD <span class="runtime">ran 11 mo</span></div>
+          <h4>Family-Approved ✅ benefit stack</h4>
+          <div class="teardown">
+            <div><b>Format</b> 5 green-check benefits + "45k+ 5★" + discount</div>
+            <div><b>Why it works</b> Scannable in one second; every objection answered as a checkmark.</div>
+            <div class="steal">Steal → the exact layout for Brief 4-A (DEET-free · on clothing · 8 hrs · kid-safe · 90 pack).</div>
+          </div>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="media tall" data-mt="video" data-src="assets/competitors/bugmd_bedbug.mp4" data-poster="assets/competitors/bugmd_bedbug-video.jpg" data-cap="BugMD · testimonial-led problem/solution video">
+          <span class="badge">Testimonial video</span><span class="fmt">▶ 45s</span><div class="play">▶</div></div>
+        <div class="body">
+          <div class="brand">BugMD <span class="runtime">ran 8 mo</span></div>
+          <h4>★★★★★ quote-led problem/solution</h4>
+          <div class="teardown">
+            <div><b>Format</b> Opens on a 5-star review quote, then benefit list</div>
+            <div><b>Why it works</b> Leads with the customer's words, not the brand's — instant credibility.</div>
+            <div class="steal">Steal → open a Luna cut on a real review quote card before the story.</div>
+          </div>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="media tall" data-mt="video" data-src="assets/competitors/pestects_bracelet.mp4" data-poster="assets/competitors/pestects_video.jpg" data-cap="Pestects · &quot;300 bite-free hours&quot; bracelet video">
+          <span class="badge">Adventure UGC</span><span class="fmt">▶ 21s</span><div class="play">▶</div></div>
+        <div class="body">
+          <div class="brand">Pestects <span class="runtime">ran 10+ mo</span></div>
+          <h4>"300 bite-free hours"</h4>
+          <div class="teardown">
+            <div><b>Format</b> Fast adventure/lifestyle UGC, bracelet form factor</div>
+            <div><b>Why it works</b> A sharp quantified duration hook ("one week per band · 300 hours") makes the value concrete.</div>
+            <div class="steal">Steal → quantify Luna harder: "8 hours per patch · 90 in a pack · a whole summer."</div>
+          </div>
+        </div>
+      </div>
+      <div class="cc">
+        <div class="media tall" data-mt="video" data-src="assets/competitors/grandpagus_rodent.mp4" data-poster="assets/competitors/grandpagus_rodent-video.jpg" data-cap="Grandpa Gus's · plant-oil + BOGO video">
+          <span class="badge">Natural-oil video</span><span class="fmt">▶ 30s</span><div class="play">▶</div></div>
+        <div class="body">
+          <div class="brand">Grandpa Gus's <span class="runtime">evergreen · BOGO</span></div>
+          <h4>Plant-oil trust + standing BOGO</h4>
+          <div class="teardown">
+            <div><b>Format</b> Natural-ingredient reassurance + "10,000+ 5★" + Buy-One-Get-One</div>
+            <div><b>Why it works</b> Pairs safety trust with a permanent offer that removes price friction.</div>
+            <div class="steal">Steal → BOGO is a category norm. Our BOGO creatives should be primary, not an afterthought.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel cream" style="margin-top:20px"><b>Four takeaways for Luna:</b>
+      <div class="two" style="margin-top:8px">
+        <ul class="clean"><li><b>Testimonial is the proven long-runner</b> — build the nurse series.</li><li><b>Hard social proof is table stakes</b> — add a real review/family number everywhere.</li></ul>
+        <ul class="clean"><li><b>"Fun sticker kids keep on"</b> is the category's most durable frame — own it.</li><li><b>Quantify + offer harder</b> — "8 hrs · 90 patches" and a visible BOGO beat a flat price.</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW CONCEPT -->
+<section id="concept">
+  <div class="wrap">
+    <span class="kicker">5.3 · New Concept — 9 Techniques</span>
+    <h2>9 techniques for parents who tune out ads</h2>
+    <p class="lead">A fresh static/thumbnail line built on nine pattern-interrupt copy techniques, each adapted to the Mosquito Patch with <b>five headline variations</b> to test. Copy is deliberately em-dash-free and human. Ten assets per technique for the next batch.</p>
+    <div class="concepts">
+
+      <div class="concept">
+        <div class="top"><div class="num">01 · Self-Deprecation</div><h4>Admit the "flaw" to feel honest</h4><div class="desc">Own how simple the product is; honesty lowers the guard.</div></div>
+        <div class="mock" style="background:#2f6f4f"><div class="lock"><span class="md"></span>Luna Naturals</div><div class="hl">It's a sticker.<br>That's the whole technology.</div><div class="sl">Citronella oil. On the shirt. 8 hours. No DEET.</div><div class="cta">See the sticker →</div></div>
+        <div class="vars"><div class="lbl">5 headline variations</div><ol>
+          <li>It's a sticker. That's the whole technology.</li>
+          <li>We make a mosquito sticker. Nobel committee has not called.</li>
+          <li>Not high-tech. Just the thing that finally worked.</li>
+          <li>A sticker beat your $12 spray. Awkward.</li>
+          <li>Yes, it's just a sticker. Your kid's ankles disagree it's "just."</li>
+        </ol><div class="send"><b>Send to:</b> getlunanatural.co/lunanaturals/kids</div></div>
+      </div>
+
+      <div class="concept">
+        <div class="top"><div class="num">02 · Understatement</div><h4>Say the big advantage small</h4><div class="desc">Undersell the mechanic so it lands as obvious and calm.</div></div>
+        <div class="mock" style="background:#3b6ea5"><div class="lock"><span class="md"></span>Luna Naturals</div><div class="hl">A bug repellent you put on the shirt.<br>Not the kid.</div><div class="sl">Because skin goes in mouths. Shirts do not.</div><div class="cta">Try the patch →</div></div>
+        <div class="vars"><div class="lbl">5 headline variations</div><ol>
+          <li>A bug repellent you put on the shirt. Not the kid.</li>
+          <li>Mildly life-changing for anyone who's fought a toddler with a spray can.</li>
+          <li>It just goes on the clothes. That's the entire pitch.</li>
+          <li>A small sticker. A surprisingly quiet backyard.</li>
+          <li>Does one thing: keeps mosquitoes off your kid. That's plenty.</li>
+        </ol><div class="send"><b>Send to:</b> /articles/pediatrician → /kids</div></div>
+      </div>
+
+      <div class="concept">
+        <div class="top"><div class="num">03 · Downsides</div><h4>The benefit that creates a "problem"</h4><div class="desc">A playful warning reframes an upside as a quirk.</div></div>
+        <div class="mock" style="background:#b7791f"><div class="lock"><span class="md"></span>Luna Naturals</div><div class="hl">Warning: your kid will want to pick the patch.</div><div class="sl">Every. Single. Morning. That's how you know they'll keep it on.</div><div class="cta">Get the patches →</div></div>
+        <div class="vars"><div class="lbl">5 headline variations</div><ol>
+          <li>Warning: your kid will want to pick the patch every morning.</li>
+          <li>Side effect: fewer daycare notes. Sorry, not sorry.</li>
+          <li>Downside: they'll ask for the dinosaur one specifically.</li>
+          <li>Fair warning — you'll have to buy more. They share them.</li>
+          <li>Caution: may cause suspiciously bite-free, cheerful children.</li>
+        </ol><div class="send"><b>Send to:</b> getlunanatural.co/lunanaturals/kids</div></div>
+      </div>
+
+      <div class="concept">
+        <div class="top"><div class="num">04 · Reverse World</div><h4>Swap the expected order</h4><div class="desc">List the old-way ritual, then pull the rug.</div></div>
+        <div class="mock" style="background:#8a3b5a"><div class="lock"><span class="md"></span>Luna Naturals</div><div class="hl">Spray the air.<br>Coat their skin.<br>Reapply every 2 hours.<br>Or... don't.</div><div class="sl">Peel one patch. Stick it on the shirt. Done for 8 hours.</div><div class="cta">Do less →</div></div>
+        <div class="vars"><div class="lbl">5 headline variations</div><ol>
+          <li>Spray. Coat. Reapply. Repeat. Or peel one sticker and stop.</li>
+          <li>Bug spray, but make it a sticker your kid asks for.</li>
+          <li>Instead of chasing them with a can, you hand them a sticker.</li>
+          <li>The old way: a fight. The new way: a sticker.</li>
+          <li>Everything bug spray makes hard, a patch makes boring.</li>
+        </ol><div class="send"><b>Send to:</b> getlunanatural.co/lunanaturals/kids</div></div>
+      </div>
+
+      <div class="concept">
+        <div class="top"><div class="num">05 · Self-Aware Ad</div><h4>Admit it's an ad</h4><div class="desc">Break the fourth wall to disarm the scroll-past.</div></div>
+        <div class="mock" style="background:#2f9e5f"><div class="lock"><span class="md"></span>Luna Naturals</div><div class="hl">Yes, this is an ad for a sticker.</div><div class="sl">A really good sticker. 90 in a pack, citronella, no DEET, keeps mosquitoes off your kid.</div><div class="cta">Fine, show me →</div></div>
+        <div class="vars"><div class="lbl">5 headline variations</div><ol>
+          <li>Yes, this is an ad for a sticker. A really good one.</li>
+          <li>We paid to put this in front of you so the daycare notes stop.</li>
+          <li>You're going to scroll past this. Your mosquitoes are thrilled.</li>
+          <li>An ad, sure. Also the reason our summer got quiet.</li>
+          <li>Skip if you enjoy the spray fight. We'll understand.</li>
+        </ol><div class="send"><b>Send to:</b> /articles/pediatrician → /kids</div></div>
+      </div>
+
+      <div class="concept">
+        <div class="top"><div class="num">06 · Absurd Exaggeration</div><h4>Push the benefit until it's funny</h4><div class="desc">Cartoon the outcome; the joke carries the claim safely.</div></div>
+        <div class="mock" style="background:#c0492e"><div class="lock"><span class="md"></span>Luna Naturals</div><div class="hl">The mosquitoes have filed a formal complaint.</div><div class="sl">Turns out a citronella sticker ruins their whole evening.</div><div class="cta">Ruin their night →</div></div>
+        <div class="vars"><div class="lbl">5 headline variations</div><ol>
+          <li>The mosquitoes have filed a formal complaint.</li>
+          <li>Local mosquitoes now avoid your backyard. Emotionally, they've moved on.</li>
+          <li>Your kid is now the least popular meal in the neighborhood.</li>
+          <li>Mosquitoes rated your child 1 star: "sticker ruined everything."</li>
+          <li>The bugs held a meeting. Your yard was removed from the itinerary.</li>
+        </ol><div class="send"><b>Send to:</b> getlunanatural.co/lunanaturals/kids</div></div>
+      </div>
+
+      <div class="concept">
+        <div class="top"><div class="num">07 · Tricky Threes</div><h4>Pattern, pattern, break</h4><div class="desc">Two straight beats set it up; the third turns.</div></div>
+        <div class="mock" style="background:#1f6f6b"><div class="lock"><span class="md"></span>Luna Naturals</div><div class="hl">Peel it.<br>Stick it.<br>Forget mosquitoes exist.</div><div class="sl">Three patches, ten seconds, eight hours of cover.</div><div class="cta">Peel &amp; stick →</div></div>
+        <div class="vars"><div class="lbl">5 headline variations</div><ol>
+          <li>Peel it. Stick it. Forget mosquitoes exist.</li>
+          <li>DEET-free, kid-approved, and the reason the daycare notes stopped.</li>
+          <li>Three patches. Ten seconds. Zero bites at pickup.</li>
+          <li>Tall, wiggly, and finally not covered in bites.</li>
+          <li>On the shirt, on the sock, off your worry list.</li>
+        </ol><div class="send"><b>Send to:</b> getlunanatural.co/lunanaturals/kids</div></div>
+      </div>
+
+      <div class="concept">
+        <div class="top"><div class="num">08 · Reverse Psychology</div><h4>Tell them not to</h4><div class="desc">Forbidding the action makes the reader lean in.</div></div>
+        <div class="mock" style="background:#4a4f8a"><div class="lock"><span class="md"></span>Luna Naturals</div><div class="hl">Please keep spraying DEET on your toddler.</div><div class="sl">We'll be over here with a sticker and zero bites. No rush.</div><div class="cta">Or switch →</div></div>
+        <div class="vars"><div class="lbl">5 headline variations</div><ol>
+          <li>Please keep spraying DEET on your toddler. No rush.</li>
+          <li>Don't switch. Your local mosquitoes are really counting on you.</li>
+          <li>Ignore this if the spray fight is going great for you.</li>
+          <li>Not for parents who enjoy reapplying every two hours.</li>
+          <li>Keep the yellow can. We'll keep the quiet backyard.</li>
+        </ol><div class="send"><b>Send to:</b> /articles/pediatrician → /kids</div></div>
+      </div>
+
+      <div class="concept">
+        <div class="top"><div class="num">09 · Slap 'n Hug</div><h4>Negative, then flip to positive</h4><div class="desc">Name the pain hard, then hand over the relief.</div></div>
+        <div class="mock" style="background:#1D1D1D"><div class="lock" style="color:#F26A3E"><span class="md"></span>Luna Naturals</div><div class="hl">Your bug spray is a fight every single morning.</div><div class="sl">This is a sticker they put on themselves and forget about. Peace, for $19.99.</div><div class="cta">End the fight →</div></div>
+        <div class="vars"><div class="lbl">5 headline variations</div><ol>
+          <li>Your bug spray is a fight every morning. This isn't.</li>
+          <li>Eight bites at pickup is not okay. Three stickers at drop-off is.</li>
+          <li>You hate the chemical cloud. Your kid loves the dinosaur sticker.</li>
+          <li>Stop wrestling a spray can. Start peeling a sticker.</li>
+          <li>The spray made everyone miserable. The patch made it a non-event.</li>
+        </ol><div class="send"><b>Send to:</b> getlunanatural.co/lunanaturals/kids</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 5.4 REDDIT / VOC -->
+<section id="reddit">
+  <div class="wrap">
+    <span class="kicker">5.4 · Reddit &amp; Voice of Customer → Static Briefs</span>
+    <h2>Real parent tensions, turned into timely statics</h2>
+    <p class="lead">Six recurring parent tensions, each mapped to the seasonal <b>moment</b> it should ride and translated into a ready static brief. The most persuasive static copy is the customer's own words, not the brand's.</p>
+    <div class="flag"><b>Sourcing note:</b> live Reddit scraping is blocked in this environment (Reddit walls off automated access). Rather than invent quotes, these six tensions are drawn from <b>real in-market customer language</b> — Luna's own <em>converting</em> advertorials (which are real parent stories) and competitor testimonial ads. Paste me specific Reddit threads or comments and I'll swap in cited, verbatim quotes per brief.</div>
+
+    <div style="margin-top:20px">
+
+      <div class="brief">
+        <div class="bh"><h4>“I hated soaking their little arms in chemicals just to go play outside.”</h4><span class="pill">Moment · every sunny day</span></div>
+        <div class="bb">
+          <div class="brow"><div class="bk">Tension</div><div>The chemical-cloud guilt. Parents hold their breath, spray, and feel bad about it every single time — plus the smell that lingers in the car for days.</div></div>
+          <div class="brow"><div class="bk">Static concept</div><div><b>HL:</b> "You hold your breath every time you spray them." <b>SL:</b> "They don't have to. Peel a sticker instead."</div></div>
+          <div class="brow"><div class="bk">Visual</div><div>Split frame — left: parent mid-spray, visible mist, kid squinting; right: patch on a shirt sleeve, kid running. Coral divider.</div></div>
+          <div class="brow"><div class="bk">Format / Send</div><div><span class="chips"><span>4:5 + 1:1</span></span> → <span class="url">getlunanatural.co/lunanaturals/kids</span></div></div>
+        </div>
+      </div>
+
+      <div class="brief">
+        <div class="bh"><h4>“He puts everything in his mouth. Then I spray his arms.”</h4><span class="pill">Moment · toddler &amp; baby audiences</span></div>
+        <div class="bb">
+          <div class="brow"><div class="bk">Tension</div><div>The hands-in-mouth panic. Sprayed skin plus a toddler who licks everything is the objection that stops the purchase.</div></div>
+          <div class="brow"><div class="bk">Static concept</div><div><b>HL:</b> "Spray goes on skin. Skin goes in mouths." <b>SL:</b> "Patches go on the shirt. That's the whole reason we switched."</div></div>
+          <div class="brow"><div class="bk">Visual</div><div>Close-up: toddler hand drifting toward mouth, a red X over a spray bottle; cut to a patch on the shirt with a green check.</div></div>
+          <div class="brow"><div class="bk">Format / Send</div><div><span class="chips"><span>4:5 + 9:16</span></span> → <span class="url">getlunanatural.co/lunanaturals/kids</span></div></div>
+        </div>
+      </div>
+
+      <div class="brief">
+        <div class="bh"><h4>“The daycare documented eight mosquito bites on my son. In 45 minutes.”</h4><span class="pill">Moment · back-to-daycare / after a bad day</span></div>
+        <div class="bb">
+          <div class="brow"><div class="bk">Tension</div><div>Eaten alive despite trying. The kid comes home covered even though you did everything — and one teacher can't spray eight toddlers.</div></div>
+          <div class="brow"><div class="bk">Static concept</div><div><b>HL:</b> "You sprayed. They still came home covered." <b>SL:</b> "A patch is already on the shirt before they walk in the door."</div></div>
+          <div class="brow"><div class="bk">Visual</div><div>Close-up of bite-covered little legs → same child, patched, bite-free at pickup. Optional "note home" prop.</div></div>
+          <div class="brow"><div class="bk">Format / Send</div><div><span class="chips"><span>4:5 + 1:1</span></span> → <span class="url">get.lunanaturals.co/articles/pediatrician</span> → /kids</div></div>
+        </div>
+      </div>
+
+      <div class="brief">
+        <div class="bh"><h4>“You reapply, then reapply again, and never know how much landed on skin versus the air.”</h4><span class="pill">Moment · BBQ / park / all-day-out</span></div>
+        <div class="bb">
+          <div class="brow"><div class="bk">Tension</div><div>The reapply treadmill. Nobody watches a clock at a barbecue, so protection quietly wears off and the bites land on the backs of the knees.</div></div>
+          <div class="brow"><div class="bk">Static concept</div><div><b>HL:</b> "One patch. Eight hours. No 'did I reapply?' math." <b>SL:</b> "Peel it at breakfast. Forget it till bath time."</div></div>
+          <div class="brow"><div class="bk">Visual</div><div>Timeline graphic: spray icon ×4 across a day (with a worried face) vs one patch icon holding steady for 8 hrs.</div></div>
+          <div class="brow"><div class="bk">Format / Send</div><div><span class="chips"><span>4:5 + 1:1</span></span> → <span class="url">getlunanatural.co/lunanaturals/kids</span></div></div>
+        </div>
+      </div>
+
+      <div class="brief">
+        <div class="bh"><h4>“The camp requires DEET. I didn't want it on my kid.”</h4><span class="pill">Moment · summer-camp sign-ups</span></div>
+        <div class="bb">
+          <div class="brow"><div class="bk">Tension</div><div>The institutional conflict. Camp/daycare mandates a product the parent flinches at, with no easy way to opt out.</div></div>
+          <div class="brow"><div class="bk">Static concept</div><div><b>HL:</b> "Camp requires DEET. Here's what I clip on instead." <b>SL:</b> "On the backpack, not the skin. Nothing for a counselor to apply."</div></div>
+          <div class="brow"><div class="bk">Visual</div><div>Camp packing list with a Luna pack checked off; patch on a backpack strap / water-bottle sleeve.</div></div>
+          <div class="brow"><div class="bk">Format / Send</div><div><span class="chips"><span>4:5 + 9:16</span></span> → <span class="url">get.lunanaturals.co/articles/pediatrician</span> → /kids</div></div>
+        </div>
+      </div>
+
+      <div class="brief">
+        <div class="bh"><h4>“We found a tick on a child who never left the yard.”</h4><span class="pill">Moment · tick-season news spikes</span></div>
+        <div class="bb">
+          <div class="brow"><div class="bk">Tension</div><div>Tick / Lyme anxiety. Parents feel a safe-looking backyard is no protection, and tick coverage spikes every spring in local news.</div></div>
+          <div class="brow"><div class="bk">Static concept</div><div><b>HL:</b> "A tick doesn't care that your yard looks safe." <b>SL:</b> "Clip a patch to the socks and ankles before they go out."</div></div>
+          <div class="brow"><div class="bk">Visual</div><div>Patch on a sock/ankle, tall grass edge; subtle tick-warning motif. Keep it factual — deters ticks, no disease claim.</div></div>
+          <div class="brow"><div class="bk">Format / Send</div><div><span class="chips"><span>4:5 + 1:1</span></span> → <span class="url">get.lunanaturals.co/ticks</span> (Tick Spray) or /kids</div></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="flag"><b>Guardrail on all six:</b> keep every claim to repelling/deterring insects and ingredient facts. No language that implies preventing bites entirely or preventing disease. Real customer wording only.</div>
+  </div>
+</section>
+
+<!-- STANDARDS -->
+<section id="standards">
+  <div class="wrap">
+    <span class="kicker">Production Standards &amp; Priorities</span>
+    <h2>How we run the next sprint</h2>
+    <div class="std">
+      <div class="c"><h4>Priorities, in order</h4><ol>
+        <li>Re-point all TSL traffic to <b>/lunanaturals/kids</b>.</li>
+        <li>Fix the LPV→ATC + checkout leaks (offer anchor, express-pay, trust bar).</li>
+        <li>Consolidate the CBO so winners stop starving.</li>
+        <li>Build the nurse-testimonial series (Brief 1).</li>
+        <li>Ship the 9-technique static batch + proof/checklist pack.</li>
+      </ol></div>
+      <div class="c"><h4>Format &amp; delivery</h4><p>Statics <b>4:5 + 1:1</b>. Reels/stories <b>9:16</b> with a centered 4:5 safe zone. Video winners get <b>15s + 6s</b> cutdowns for retargeting. Captions burned in for sound-off. Real product photography only.<br><br>Naming: <code>&lt;creative&gt;_&lt;angle&gt;_&lt;Mon_DD&gt;_lunanaturals/kids</code> so every asset is force-pointed at the winning page and stays sortable in this report format.</p></div>
+      <div class="c"><h4>Guardrails</h4><p>Personal-choice and ingredient framing only (citronella oil · on clothing, not skin · 8 hrs · 90 pack · $19.99). <b>No claims</b> to prevent bites or disease, and no implied clinical endorsement. Real testimonials only. Borrow a competitor's <b>format</b>, never their claim. Ad copy stays em-dash-free and human.</p></div>
+      <div class="c"><h4>What to watch weekly</h4><p>Two numbers decide scale, not ROAS alone: <b>LPV→ATC</b> (target 12%+) and <b>checkout→purchase</b> (target 45%+). Then CPA toward <b>&lt;$25</b>. Verify Meta <b>attribution</b>, not just pixel fire, given the cross-domain checkout. Cut any 25–44 delivery that shows 0 funnel.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Luna Naturals · Mosquito Patch for Kids · Launch → 30 Jun 2026 · Prepared by Skyvane · Data: Meta Ads + live category ad libraries</div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal" role="dialog" aria-modal="true">
+  <button class="x" id="mx" aria-label="Close">✕</button>
+  <div class="inner" id="minner"></div>
+</div>
+
+<script>
+(function(){
+  var modal=document.getElementById('modal'),inner=document.getElementById('minner'),x=document.getElementById('mx');
+  function close(){modal.classList.remove('open');inner.innerHTML='';}
+  function open(el){
+    var t=el.getAttribute('data-mt'),src=el.getAttribute('data-src'),cap=el.getAttribute('data-cap')||'',poster=el.getAttribute('data-poster')||'';
+    var html='';
+    if(t==='img'){html='<img src="'+src+'" alt="'+cap+'">';}
+    else if(t==='video'){html='<video src="'+src+'" controls autoplay playsinline'+(poster?' poster="'+poster+'"':'')+'></video>';}
+    else if(t==='fb'){
+      var href=encodeURIComponent(src);
+      html='<iframe src="https://www.facebook.com/plugins/video.php?href='+href+'&show_text=false&width=476&height=600&t=0" width="476" height="600" style="max-width:92vw" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>';
+      html+='<div class="cap">'+cap+'<br>Video hosted on Facebook — if playback is blocked here, <a href="'+src+'" target="_blank" rel="noopener">watch it on Facebook ↗</a></div>';
+      inner.innerHTML=html;modal.classList.add('open');return;
+    }
+    if(cap){html+='<div class="cap">'+cap+'</div>';}
+    inner.innerHTML=html;modal.classList.add('open');
+  }
+  document.querySelectorAll('.media[data-mt]').forEach(function(el){
+    var mt=el.getAttribute('data-mt');
+    var bg=el.getAttribute('data-poster')||((mt==='img')?el.getAttribute('data-src'):null);
+    if(bg){el.style.backgroundImage="url('"+bg+"')";}
+    el.addEventListener('click',function(){open(el);});
+  });
+  x.addEventListener('click',close);
+  modal.addEventListener('click',function(e){if(e.target===modal)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>
